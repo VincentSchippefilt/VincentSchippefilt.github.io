@@ -29,5 +29,6 @@ theme: minima
 # custom settings
 permalink: /:year/:month/:title
 tagline: Strive to improve!
+exclude: [commands.txt]
 
 
