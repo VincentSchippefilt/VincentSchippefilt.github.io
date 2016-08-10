@@ -1,0 +1,20 @@
+---
+layout: page
+title: My CV
+permalink: /cv
+---
+
+my cv
+<ul>
+{% for employer in site.data.exp %}
+
+<li>{{ employer.Company }}</li>
+<ul>
+{% for project in employer.Projects %}
+
+<li>{{ project.Customer }}</li>
+{% endfor %}
+</ul>
+{% endfor %}
+
+</ul>
