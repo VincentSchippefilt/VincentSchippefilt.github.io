@@ -45,5 +45,5 @@ var data =
 ];
 
 function doit() {
-alert (data[0].company.name);
+//alert (data[0].company.name);
 }
