@@ -4,29 +4,36 @@ title: My CV
 permalink: /cv/
 ---
 
-<ul>
+<script src="data.js"></script>
     {% for employer in site.data.exp %}
     <h3>{{ employer.Company }}</h3>
         {% assign start = employer.StartDate | date: "%Y" %}
         {% assign end = employer.EndDate | default : 'now' | date: "%Y" %}
         {% for year in (start..end) reversed %}
+        <div style="clear:both">
             <div>
                 {{ year }}
-                <ul>
-                    {% for project in employer.Projects %}
-                        {% assign projectStart  = project.StartDate | date : %Y | round %}
-                        {% assign projectEnd  = project.EndDate | date : %Y | round %}
-                        {% if projectStart <= year and projectEnd >= year  %}
-                            <li>
-                                <strong>{{ project.Customer }}</strong> on {{ project.ProjectName}} between {{ project.StartDate }} and {{ project.EndDate }}
-                            </li>
-                          
-                        {% endif %}
-                    {% endfor %}
-                </ul>
             </div>
+                {% for project in employer.Projects %}
+                    {% assign projectStart  = project.StartDate | date : %Y | round %}
+                    {% assign projectEnd  = project.EndDate | date : %Y | round %}
+                    {% if projectStart <= year and projectEnd >= year  %}
+                        {% comment %}<li>
+                            <strong>{{ project.Customer }}</strong> on {{ project.ProjectName}} between {{ project.StartDate }} and {{ project.EndDate }}
+                        </li>{% endcomment %}
+                        
+                        {% assign monthtStart  = project.StartDate | date : "%m" | round %}
+                        {% assign monthEnd  = project.EndDate | date : "%m" | round %}                        
+                        {% assign nbMonth =  monthEnd - monthtStart %}                    
+                        <div style="float: left; padding: 0 0 0 0; margin 0 0 0 0; width:{{ 90.0 | divided_by: 12 | times: nbMonth | round }}%; background-color:{% cycle 'year': '#5D6C7C' , '#BBA45E' , '#5E8BBB' ,  '#667D5E' , '#7D755E' , '#7D5E6D' , '#7D7D7D' %}"> {{ nbMonth }} -  {{ 100.0 | divided_by: 12 | times: nbMonth | round }}</div>                       
+                    {% endif %}
+                {% endfor %}     
+        <div>   
         {% endfor %}
     {% endfor %}
+<script>
+jQuery(document).ready(function() {
+  doit()
+})
 
-      number of month is ((endmonth  - start month) + 12 ) % 12
-</ul>
+</script>
