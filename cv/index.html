@@ -1,20 +1,32 @@
 ---
 layout: page
 title: My CV
-permalink: /cv
+permalink: /cv/
 ---
 
-my cv
 <ul>
-{% for employer in site.data.exp %}
+    {% for employer in site.data.exp %}
+    <h3>{{ employer.Company }}</h3>
+        {% assign start = employer.StartDate | date: "%Y" %}
+        {% assign end = employer.EndDate | default : 'now' | date: "%Y" %}
+        {% for year in (start..end) reversed %}
+            <div>
+                {{ year }}
+                <ul>
+                    {% for project in employer.Projects %}
+                        {% assign projectStart  = project.StartDate | date : %Y | round %}
+                        {% assign projectEnd  = project.EndDate | date : %Y | round %}
+                        {% if projectStart <= year and projectEnd >= year  %}
+                            <li>
+                                <strong>{{ project.Customer }}</strong> on {{ project.ProjectName}} between {{ project.StartDate }} and {{ project.EndDate }}
+                            </li>
+                          
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endfor %}
+    {% endfor %}
 
-<li>{{ employer.Company }}</li>
-<ul>
-{% for project in employer.Projects %}
-
-<li>{{ project.Customer }}</li>
-{% endfor %}
-</ul>
-{% endfor %}
-
+      number of month is ((endmonth  - start month) + 12 ) % 12
 </ul>

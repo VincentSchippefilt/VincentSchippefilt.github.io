@@ -5,6 +5,21 @@
         "EndDate": "",
         "Projects": [
             {
+                "Customer": "Toyota",
+                "Sector": "Automotive",
+                "Website": "https://www.toyota.be/",
+                "ProjectName": "Network KPI",
+                "StartDate": "2016-05-04",
+                "EndDate": "2016-07-15",
+                "ManDays": 100,
+                "PeopleInvolved": 3,
+                "DurationInMonth": 3,
+                "TechnicalEnvironment": "React, Redux, Node.js, Express, Heroku, Git, Visual Studio Code, SQL Server 2012, Javascript, HTML5, CSS3, ES6, Babel, Webpack, Bower, Npm, jQuery, Passport, Mocha",
+                "ProjectDescription": "Network KPI is a new web tool made for Toyota that allows them to gather KPIs from their NMSCs so that this data can be used in their PowerBI tools. This web tool replaces an Excel based solution with a much more user friendly interface conform with the Toyota styling standards and provides a more reliable way to get the correct data.",
+                "Function": "Solution Architect",
+                "JobDescription": "Member of an agile development team using the Scrum methodology and pair programming, functional analysis, pre-sales research and estimation, analysis, development, testing, integration, bugfixing"
+            },
+            {
                 "Customer": "Credoc",
                 "Sector": "Public",
                 "Website": "www.credoc.be",
@@ -85,7 +100,7 @@
                 "Website": "http://www.atlascopco.com",
                 "ProjectName": "Maintance iC³",
                 "StartDate": "2013-10-01",
-                "EndDate": "",
+                "EndDate": "2015-12-31",
                 "ManDays": "",
                 "PeopleInvolved": 3,
                 "DurationInMonth": "",
