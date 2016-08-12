@@ -25,7 +25,8 @@ permalink: /cv/
                         {% assign monthtStart  = project.StartDate | date : "%m" | round %}
                         {% assign monthEnd  = project.EndDate | date : "%m" | round %}                        
                         {% assign nbMonth =  monthEnd - monthtStart %}                    
-                        <div style="float: left; padding: 0 0 0 0; margin 0 0 0 0; width:{{ 90.0 | divided_by: 12 | times: nbMonth | round }}%; background-color:{% cycle 'year': '#5D6C7C' , '#BBA45E' , '#5E8BBB' ,  '#667D5E' , '#7D755E' , '#7D5E6D' , '#7D7D7D' %}"> {{ nbMonth }} -  {{ 100.0 | divided_by: 12 | times: nbMonth | round }}</div>                       
+                        <div style="float: left; padding: 0 0 0 0; margin 0 0 0 0; width:{{ 90.0 | divided_by: 12 | times: nbMonth | round }}%; 
+                        background-color:{% cycle 'year': '#5D6C7C' , '#BBA45E' , '#5E8BBB' ,  '#667D5E' , '#7D755E' , '#7D5E6D' , '#7D7D7D' %}"> {{ nbMonth }} -  {{ 100.0 | divided_by: 12 | times: nbMonth | round }}</div>                       
                     {% endif %}
                 {% endfor %}     
         <div>   
