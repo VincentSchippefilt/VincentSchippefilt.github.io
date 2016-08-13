@@ -4,57 +4,47 @@ title: My CV
 permalink: /cv/
 ---
 
-<script src="data.js"></script>
-    {% comment %}{% for employer in site.data.exp %}
-    <h3>{{ employer.Company }}</h3>
-        {% assign start = employer.StartDate | date: "%Y" %}
-        {% assign end = employer.EndDate | default : 'now' | date: "%Y" %}
-        {% for year in (start..end) reversed %}
-        <div style="clear:both">
-            <div>
-                {{ year }}
-            </div>
-                {% for project in employer.Projects %}
-                    {% assign projectStart  = project.StartDate | date : %Y | round %}
-                    {% assign projectEnd  = project.EndDate | date : %Y | round %}
-                    {% if projectStart <= year and projectEnd >= year  %}
-                        {% comment %}<li>
-                            <strong>{{ project.Customer }}</strong> on {{ project.ProjectName}} between {{ project.StartDate }} and {{ project.EndDate }}
-                        </li>{% endcomment %}
-                        
-                        {% assign monthtStart  = project.StartDate | date : "%m" | round %}
-                        {% assign monthEnd  = project.EndDate | date : "%m" | round %}                        
-                        {% assign nbMonth =  monthEnd - monthtStart %}                    
-                        <div style="float: left; padding: 0 0 0 0; margin 0 0 0 0; width:{{ 90.0 | divided_by: 12 | times: nbMonth | round }}%; 
-                        background-color:{% cycle 'year': '#4E7297' , '#499B80' , '#5E58A2' ,  '#E8B76E' , 
-                        '#83A0BE' , '#80C0AB' , '#918DC6' , '#FFDDA9' %}"> {{ nbMonth }} -  {{ 100.0 | divided_by: 12 | times: nbMonth | round }}</div>                       
-                    {% endif %}
-                {% endfor %}     
-        <div>   
-        {% endfor %}
-    {% endfor %}{% endcomment %}
-
-
-<div data-bind="foreach: $data">
-    <div >
-        <h2 data-bind="text: $data.company.name"></h2>
-        <div data-bind="foreach: $data.company.activities">
-            <div style="width:100%">
-                <span data-bind="text: $data.year"></span>            
-                <!-- ko foreach: $data.projects -->
-                <!-- ko ifnot: $data.Project.IsAside -->
-                    <div class="project" data-bind="style: {width: ((80/12) * $data.NbMonth) + '%'} ">
-                        <span data-bind="text:$data.Project.Customer + ' ('+ $data.NbMonth+' m)'"></span>
-                    </div>
-                <!-- /ko -->
-                <!-- /ko -->
-            </div>
-        </div>
-    </div>
+<script src="data.js"></script> 
+<script src="experience.js"></script>
+<!--<pre data-bind="text: ko.toJSON($data,2,2)"></pre> -->
+<table class="yearTable">
+    <thead>
+        <tr>
+            <td>year</td>        
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+        </tr>
+    </thead>
+    <tbody data-bind="foreach: $data">
+        <tr>
+            <td data-bind="text: year"></td>
+            <!-- ko foreach: months -->
+                <td>
+                    <div>
+<div data-bind="foreach: projects">
+<span data-bind="text: ProjectName, style: {backgroundColor: color}"></span>
 </div>
+                    </div>
+                    
+                </td>            
+            <!-- /ko -->        
+        </tr>
+    </tbody>
+</table>
+
 
 <script>  
 jQuery(document).ready(function() {
-  ko.applyBindings(data);
+    displayProjects(rawData);
 })
 </script>

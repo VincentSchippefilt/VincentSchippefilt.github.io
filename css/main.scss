@@ -42,3 +42,12 @@ $on-laptop:        800px;
     display: inline-block;
     border: solid 1px black;
 }
+
+.yearTable {
+    width: 100%;
+    td {
+        width: 7.6%;
+        overflow: hidden;
+    }
+}
+
