@@ -107,7 +107,8 @@
                 "TechnicalEnvironment": ".Net 4.5, WebApi 2.0, Asp.Net, Entity Framework 6, Javascript, ,HTML, CSS, Jquery, Knockoutjs, VSTests, TFS, VSO, Visual studio 2013, XML, JSON",
                 "ProjectDescription": "Review and enhance parts of IC³ developped in 2008",
                 "Function": "Analyst developer, PM",
-                "JobDescription": "Define priorities with the client\nImplement changes\nTest and deploy changes"
+                "JobDescription": "Define priorities with the client\nImplement changes\nTest and deploy changes",
+                "IsAside":"true"
             },
             {
                 "Customer": "Atlas Copco",
@@ -197,7 +198,8 @@
                 "TechnicalEnvironment": "Domino, Notes, .Net, Sharepoint, Office 365",
                 "ProjectDescription": "As many of our clients are willing to migrate from their current situation, usually lotus notes based, to Microsoft solutions (especially sharepoint), GFI is willing to go one step further and propose them a single strategy to find the best possible solution for the client (sharepoint on premise or on the cloud, custom development or customization, …) using a single, unified approach.",
                 "Function": "Workgroup responsible",
-                "JobDescription": "Coordonate the information gathering, write the summary and the methodology of migrating from anything to the microsoft platform"
+                "JobDescription": "Coordonate the information gathering, write the summary and the methodology of migrating from anything to the microsoft platform",
+                "IsAside":"true"
             },
             {
                 "Customer": "Fortis",

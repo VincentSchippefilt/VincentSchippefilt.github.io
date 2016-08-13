@@ -37,3 +37,8 @@ $on-laptop:        800px;
 
 // Import partials from the `minima` theme.
 @import "minima";
+
+.project {
+    display: inline-block;
+    border: solid 1px black;
+}

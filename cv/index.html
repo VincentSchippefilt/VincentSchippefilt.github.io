@@ -5,7 +5,7 @@ permalink: /cv/
 ---
 
 <script src="data.js"></script>
-    {% for employer in site.data.exp %}
+    {% comment %}{% for employer in site.data.exp %}
     <h3>{{ employer.Company }}</h3>
         {% assign start = employer.StartDate | date: "%Y" %}
         {% assign end = employer.EndDate | default : 'now' | date: "%Y" %}
@@ -26,15 +26,35 @@ permalink: /cv/
                         {% assign monthEnd  = project.EndDate | date : "%m" | round %}                        
                         {% assign nbMonth =  monthEnd - monthtStart %}                    
                         <div style="float: left; padding: 0 0 0 0; margin 0 0 0 0; width:{{ 90.0 | divided_by: 12 | times: nbMonth | round }}%; 
-                        background-color:{% cycle 'year': '#5D6C7C' , '#BBA45E' , '#5E8BBB' ,  '#667D5E' , '#7D755E' , '#7D5E6D' , '#7D7D7D' %}"> {{ nbMonth }} -  {{ 100.0 | divided_by: 12 | times: nbMonth | round }}</div>                       
+                        background-color:{% cycle 'year': '#4E7297' , '#499B80' , '#5E58A2' ,  '#E8B76E' , 
+                        '#83A0BE' , '#80C0AB' , '#918DC6' , '#FFDDA9' %}"> {{ nbMonth }} -  {{ 100.0 | divided_by: 12 | times: nbMonth | round }}</div>                       
                     {% endif %}
                 {% endfor %}     
         <div>   
         {% endfor %}
-    {% endfor %}
-<script>
-jQuery(document).ready(function() {
-  doit()
-})
+    {% endfor %}{% endcomment %}
 
+
+<div data-bind="foreach: $data">
+    <div >
+        <h2 data-bind="text: $data.company.name"></h2>
+        <div data-bind="foreach: $data.company.activities">
+            <div style="width:100%">
+                <span data-bind="text: $data.year"></span>            
+                <!-- ko foreach: $data.projects -->
+                <!-- ko ifnot: $data.Project.IsAside -->
+                    <div class="project" data-bind="style: {width: ((80/12) * $data.NbMonth) + '%'} ">
+                        <span data-bind="text:$data.Project.Customer + ' ('+ $data.NbMonth+' m)'"></span>
+                    </div>
+                <!-- /ko -->
+                <!-- /ko -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>  
+jQuery(document).ready(function() {
+  ko.applyBindings(data);
+})
 </script>
