@@ -19,7 +19,7 @@ function displayProjects(data) {
                 if (startDate.getFullYear() <= y && endDate.getFullYear() >= y) {
                     if (startDate.getFullYear() == endDate.getFullYear()) {
                         if (startDate.getMonth() <= m && endDate.getMonth() >= m) {
-                            shouldAddProject = true;
+                            shouldAddProject =true;
                         }
                     }
                     else {
