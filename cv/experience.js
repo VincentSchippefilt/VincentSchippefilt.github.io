@@ -3,7 +3,8 @@ function displayProjects(data) {
     for (var y = new Date().getFullYear(); y >= 2008; y--) {
         var currentYear = {
             year: y,
-            months: []
+            months: [],
+            allProjects : []
         };
 
         for (var m = 0; m < 12; m++) {
@@ -18,6 +19,9 @@ function displayProjects(data) {
                 var shouldAddProject = false;
                 if (startDate.getFullYear() <= y && endDate.getFullYear() >= y) {
                     if (startDate.getFullYear() == endDate.getFullYear()) {
+                        //add once the projects for the specific year it started in the allProjets
+                        if (m == 0)
+                         allProjects.push(project);
                         if (startDate.getMonth() <= m && endDate.getMonth() >= m) {
                             shouldAddProject =true;
                         }
@@ -59,6 +63,7 @@ function displayProjects(data) {
 
     ko.applyBindings({
         expPerMonth: expPerMonth,
+        rawData: data,
         maximumCountPerMonth: maximumCountPerMonth,
         arrayOfCount: arrayOfCount
     });
