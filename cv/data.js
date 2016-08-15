@@ -10,13 +10,9 @@ var data =
                 {
                     "year":  {{ year }},
                     "projects":[
-{% for project in employer.Projects %} {% assign projectStart  = project.StartDate | date : %Y | round %}{% assign projectEnd  = project.EndDate | date : %Y | round %}{% if projectStart <= year and projectEnd >= year  %}{% assign monthStart  = project.StartDate | date : "%m" | round %}{% assign monthEnd  = project.EndDate | date : "%m" | round %}{% assign nbMonth =  monthEnd | minus: monthStart | plus: 12 | modulo: 12 %}
+{% for project in employer.Projects %} {% assign projectStart  = project.StartDate | date : %Y | round %}{% if projectStart == year %}
                         {
-                            "NbMonth": 
-                            {% if nbMonth == 0 %} 1 {% else %}{{ nbMonth }}{% endif %},
-                            "MonthtStart": "{{ project.StartDate }}" ,
-                            "MonthEnd": "{{ project.EndDate }}" ,
-                            "NbMonthPercentage" :  {{ 100.0 | divided_by: 12 | times: nbMonth | round }}, 
+                            
                             "Project":{{ project | jsonify }}
                         },    {% endif %}{% endfor %}
                     ]
