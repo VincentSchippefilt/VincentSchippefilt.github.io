@@ -5,8 +5,8 @@ permalink: /cv/
 ---
 
 <script src="data.js"></script> 
-<script src="experience.js"></script>
-<!--<pre data-bind="text: ko.toJSON($data,2,2)"></pre>-->
+<!--<script src="experience.js"></script>-->
+<!--<pre data-bind="text: ko.toJSON($data,2,2)"> </pre>-->
 
 <!--
 <div data-bind="foreach: expPerMonth">
@@ -18,119 +18,43 @@ permalink: /cv/
     </div>
 </div>-->
 <div class="timeline">
-    <!-- ko foreach: expPerMonth -->
-     <span class="timeline-label ">
-        <span class="label label-primary"  data-bind="text: Company"></span>        
+    <!-- ko foreach: $data -->
+    <span class="timeline-label ">
+        <span class="label label-default"  data-bind="text: company.name"></span>        
     </span>
-    <!-- ko foreach: year -->
+    <!-- ko foreach: company.activities -->
     <span class="timeline-label ">
         <span class="label label-default"  data-bind="text: year"></span>        
     </span>
-    <!-- ko foreach: allProjects -->
+
+    <!-- ko foreach: projects -->
+    
     <div class="timeline-item">
         <div class="timeline-point timeline-point-default">
+            <i class="fa" data-bind="css: 'fa-'+Project.Icon"></i>
         </div>
         <div class="timeline-event">
-            <div class="panel" data-bind="css:  'panel-' + Importance">
+            <div class="panel" data-bind="css:  'panel-' + Project.Importance">
                 <div class="panel-heading">
-                    <span class="panel-title" data-bind="text: ProjectName"></span>
-                    <!-- ko if: DurationInMonth -->                    
-                        <span class="panel-title pull-right" data-bind="text: DurationInMonth + ' months' "></span>
+                    <span class="panel-title" data-bind="text: Project.ProjectName + ' @ ' + Project.Customer"></span>
+                    <!-- ko if: Project.DurationInMonth -->                    
+                        <span class="panel-title pull-right" data-bind="text: Project.DurationInMonth + ' months' "></span>
                     <!-- /ko -->
                 </div>
                 <div class="panel-body">
-                    Panel content
+                    <p>I was<span data-bind="text: ' '+Project.Function"></span></p>                    
                 </div>
+                <!-- ko ifnot: Project.IsAside -->
+                <div class="panel-footer">
+                    <p data-bind="text: Project.ProjectDescription"></p>
+                </div>
+                <!-- /ko -->                
             </div>
         </div>
     </div>
     <!-- /ko -->
     <!-- /ko -->
-</div>
-
-<div class="timeline">
-    <div class="timeline-item">
-        <div class="timeline-point timeline-point-default">
-            <i class="fa fa-money"></i>
-        </div>
-        <div class="timeline-event">
-            <div class="timeline-heading">
-                <h4>Event header text</h4>
-            </div>
-            <div class="timeline-body">
-                <p>Event body text</p>
-            </div>
-            <div class="timeline-footer">
-                <p class="text-right">Event footer text</p>
-            </div>
-        </div>
-        
-    </div>
-
-    
-
-    <span class="timeline-label">
-        <span class="label label-primary">09.03.2016</span>
-    </span>
-</div>
-
-<div class="timeline">
-    <div class="timeline-item">
-        <div class="timeline-point timeline-point-danger">
-            ...
-        </div>
-        <div class="timeline-point timeline-point-blank"></div>
-        <div class="timeline-event timeline-event-danger">
-            ...
-        </div>
-    </div>
-    <div class="timeline-item timeline-item-arrow-sm">
-    <div class="timeline-point timeline-point-primary">
-        <i class="fa fa-star"></i>
-    </div>
-    <div class="timeline-event timeline-event-primary">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h3 class="panel-title">Panel header</h3>
-            </div>
-            <div class="panel-body">
-                Panel content
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="timeline-item timeline-item-arrow-sm">
-    <div class="timeline-point timeline-point-primary">
-        <i class="fa fa-star"></i>
-    </div>
-    <span class="timeline-label">
-        <span class="label label-info">label</span>
-    </span>
-    <!--<div class="timeline-event timeline-event-primary">
-        <table class="table table-striped table-hover">
-            <tr>
-                <th>timeline-event with table</th>
-                <th>timeline-event with table</th>
-            </tr>
-            <tr>
-                <td>cell</td>
-                <td>cell</td>
-            </tr>
-            <tr>
-                <td>cell</td>
-                <td>cell</td>
-            </tr>
-            <tr>
-                <td>cell</td>
-                <td>cell</td>
-            </tr>
-        </table>
-    </div>-->
-    <span class="timeline-label">
-        <button class="btn btn-danger"><i class="fa fa-ambulance"></i></button>
-    </span>
-</div>
+    <!-- /ko -->
 </div>
 
 <div class="row">
@@ -200,6 +124,7 @@ permalink: /cv/
 </div>
 <script>  
 jQuery(document).ready(function() {
-    displayProjects(rawData);
+    //displayProjects(data);
+    ko.applyBindings(data);
 })
 </script>

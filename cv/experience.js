@@ -21,7 +21,7 @@ function displayProjects(data) {
                     if (startDate.getFullYear() == endDate.getFullYear()) {
                         //add once the projects for the specific year it started in the allProjets
                         if (m == 0)
-                         allProjects.push(project);
+                         currentYear.allProjects.push(project);
                         if (startDate.getMonth() <= m && endDate.getMonth() >= m) {
                             shouldAddProject =true;
                         }

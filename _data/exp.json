@@ -18,7 +18,8 @@
                 "ProjectDescription": "Network KPI is a new web tool made for Toyota that allows them to gather KPIs from their NMSCs so that this data can be used in their PowerBI tools. This web tool replaces an Excel based solution with a much more user friendly interface conform with the Toyota styling standards and provides a more reliable way to get the correct data.",
                 "Function": "Solution Architect",
                 "JobDescription": "Member of an agile development team using the Scrum methodology and pair programming, functional analysis, pre-sales research and estimation, analysis, development, testing, integration, bugfixing",
-                "Importance":"primary"
+                "Importance":"primary",
+                "Icon":"car"
             },
             {
                 "Customer": "Credoc",
@@ -35,7 +36,8 @@
                 "ProjectDescription": "",
                 "Function": "Architect, developer",
                 "JobDescription": "Define the functional and technical solution, coaching the development team to implement the solution.\nParticipate in the development of the solution (20%)",
-                "Importance":"default"
+                "Importance":"default",
+                "Icon":"book"
             },
             {
                 "Customer": "Total",
@@ -52,7 +54,9 @@
                 "ProjectDescription": "Total Contractor Portal is the new web portal for contractors that want to work for Total Antwerp.\nIt is the main entry point for new contractors to present their company, offer their services to Total Antwerp, and request for an approval to make sure their employees are allowed to enter the different sites of Total.\nAs management tool it helps external contractors and Total employees in their daily administration. Documents, employee details and site entrance requests are handled and stored in one central place and the tool makes the follow-up of contractors and people access more transparent.\nContractors can register their company as a candidate for a collaboration with Total, manage their documents requested by Total, add and manage employees, add and manage sub-contractors and keep track of their own approval state.\nTotal coworkers can manage contractor requests in a structured way, keep track of documents needed to get approved as a contractor for Total Antwerp and handle the complete approval flow of companies and employee access to the different sites of Total Antwerp.",
                 "Function": "Solution Architect, development team lead",
                 "JobDescription": "Third line support, execute change requests (in Kanban)",
-                "Importance":"default"
+                 "IsAside":"true",
+                "Importance":"default",
+                "Icon":"industry"
             },
             {
                 "Customer": "Total",
@@ -69,7 +73,8 @@
                 "ProjectDescription": "Total Contractor Portal is the new web portal for contractors that want to work for Total Antwerp.\nIt is the main entry point for new contractors to present their company, offer their services to Total Antwerp, and request for an approval to make sure their employees are allowed to enter the different sites of Total.\nAs management tool it helps external contractors and Total employees in their daily administration. Documents, employee details and site entrance requests are handled and stored in one central place and the tool makes the follow-up of contractors and people access more transparent.\nContractors can register their company as a candidate for a collaboration with Total, manage their documents requested by Total, add and manage employees, add and manage sub-contractors and keep track of their own approval state.\nTotal coworkers can manage contractor requests in a structured way, keep track of documents needed to get approved as a contractor for Total Antwerp and handle the complete approval flow of companies and employee access to the different sites of Total Antwerp.",
                 "Function": "Solution Architect, development team lead",
                 "JobDescription": "Member of an agile development team, Pair programming, Test-driven development, choose the framework",
-                "Importance":"primary"
+                "Importance":"primary",
+                "Icon":"industry"
             },
             {
                 "Customer": "Atlas Copco",
@@ -86,7 +91,8 @@
                 "ProjectDescription": "Master data loader is a tool used by atlas copco to synchronize data coming from multiple sources into their Quotation system.\nIt includes loading, cleaning and computing of data coming from various sources (databases, files, other systems through webservices) and uploading them into the Quotation system using webservices.",
                 "Function": "Architect, analyst, developper, team leader",
                 "JobDescription": "For this small project, I did the architecture, analysis, management of the other developer and developped part of the application.",
-                "Importance":"default"
+                "Importance":"default",
+                "Icon":"compress"
             },
             {
                 "Customer": "Toyota",
@@ -102,7 +108,8 @@
                 "ProjectDescription": "Recreate the entire customer facing website, for all websites in Europe and Russia:\nwww.toyota.be, www.toyota.it, www.toyota.fr, www.toyota.nl, etc.",
                 "Function": "Senior Consultant",
                 "JobDescription": "Analyse the performance of the application on all devices and make recommandations to improve the different performance KPI.",
-                "Importance":"default"
+                "Importance":"default",
+                "Icon":"car"
             },
             {
                 "Customer": "Atlas Copco",
@@ -119,7 +126,8 @@
                 "Function": "Analyst developer, PM",
                 "JobDescription": "Define priorities with the client\nImplement changes\nTest and deploy changes",
                 "IsAside":"true",
-                "Importance":"default"
+                "Importance":"default",
+                "Icon":"compress"
             },
             {
                 "Customer": "Atlas Copco",
@@ -135,7 +143,8 @@
                 "ProjectDescription": "The goal of this project was to rewrite and integrate in iC³ the tools the engeneering teams needed to support their new way of managing the proposal and contracting phase of the order process, using LEAN methodoligies.",
                 "Function": "Architect, Member of the development team, development team leader",
                 "JobDescription": "Design, code, test along with the other team members.\nCreate and present demo to the client\nSetup and maintain the continious delivery platform (using VSO)",
-                "Importance":"primary"
+                "Importance":"primary",
+                "Icon":"tasks"
             },
             {
                 "Customer": "SNCB/NMBS",
@@ -152,7 +161,8 @@
                 "ProjectDescription": "The goal of the project Apollo is to create and update a set of applications that allows the central and local plannification of train drivers, for the mid and short term.",
                 "Function": "Senior .Net Developer",
                 "JobDescription": "- Member of the development team\n- Develop a central validation process for all the interface nourishing the current application\n- Develop validation rule engine",
-                "Importance":"default"
+                "Importance":"default",
+                "Icon":"train"
             },
             {
                 "Customer": "D’Ieteren",
@@ -169,7 +179,8 @@
                 "ProjectDescription": "The goal of the project Mercure is to migrate all the IBM Domino/Notes infrastructure to Office 365 and Sharepoint Online. Not all the applications that were hosted in Domino were fitting those environments, so we have rewritten them as custom .NET web applications.",
                 "Function": "Architect, Senior .Net Developer",
                 "JobDescription": "- Follow-up and guide the development team\n- From September, member of the development team",
-                "Importance":"default"
+                "Importance":"default",
+                "Icon":"car"
             },
             {
                 "Customer": "Wit-Gele Kruis West-Vlaanderen",
@@ -186,7 +197,8 @@
                 "ProjectDescription": "Find why the new application AFDA is not performing well, propose solutions. Lead the implementation of the solution.",
                 "Function": "Consultant",
                 "JobDescription": "Find why the new application AFDA is not performing well, propose solutions. Lead the implementation of the solution.",
-                "Importance":"default"
+                "Importance":"default",
+                "Icon":"plus"
             },
             {
                 "Customer": "Fortis",
@@ -203,7 +215,8 @@
                 "ProjectDescription": "Define the architecture of the new application, assist the functional analyst with the gathering and formalization of the requirements (functional and non functional).",
                 "Function": "Application Architect",
                 "JobDescription": "Define the architecture of the new application, assist the functional analyst with the gathering and formalization of the requirements (functional and non functional).",
-                "Importance":"default"
+                "Importance":"default",
+                "Icon":"building"
             },
             {
                 "Customer": "GFI",
@@ -221,7 +234,8 @@
                 "Function": "Workgroup responsible",
                 "JobDescription": "Coordonate the information gathering, write the summary and the methodology of migrating from anything to the microsoft platform",
                 "IsAside":"true",
-                "Importance":"default"
+                "Importance":"default",
+                "Icon":"code-fork"
             },
             {
                 "Customer": "Fortis",
@@ -237,7 +251,8 @@
                 "ProjectDescription": "Write an application that can manage the physical move of assets.",
                 "Function": "Application Architect/Team Lead/Technical Analyst/Developer",
                 "JobDescription": "? Refine the business analysis with the client and write the technical analysis, \n? Define the architecture of the solution,\n? Manage and coach a team of 3 junior developers + 2 developer,\n? Participate in the development of the solution,\n? Define the test environment, create continuous integration environment, \n? Realize integration and performance test on the client’s environment.",
-                "Importance":"default"
+                "Importance":"default",
+                "Icon":"building"
             },
             {
                 "Customer": "Atlas Copco",
@@ -253,7 +268,8 @@
                 "ProjectDescription": "Create a collaboration product allowing the different parties taking part or wanting to know about some custom design compressors, to:\n• Ensure that no duplicate request from the same client is evaluated by the engineers to avoid internal concurrency and misuse of HR (worldwide),\n• Ensure that the custom design compressors are described in a controlled and query-able way,\n• Manage the construction of custom design compressors from requirement to delivery, integrating with the current AtlasCopco’s production and reporting infrastructure,\n• Communicate with other parties, using dedicated methods or standard mails,\n• Manage the security of all the virtual components of the projects, allowing the power users to change the security rules using a complex set of conditions without any IT actions.",
                 "Function": "Application Architect/Team Lead/Technical Analyst/Developer",
                 "JobDescription": "? Refine the business analysis with the client and write the technical analysis, \n? Define the architecture of the solution,\n? Manage and coach a team of 3 junior developers + 2 developer,\n? Participate in the development of the solution,\n? Define the test environment, create continuous integration environment, \n? Realize integration and performance test on the client’s environment.",
-                "Importance":"primary"
+                "Importance":"primary",
+                "Icon":"compress"
             },
             {
                 "Customer": "Electrabel",
@@ -269,7 +285,8 @@
                 "ProjectDescription": "Writing a product to manage the gas networks and decision model based on it.",
                 "Function": "Developer",
                 "JobDescription": "Write code",
-                "Importance":"default"
+                "Importance":"default",
+                "Icon":"bolt"
             }
         ]
     },
