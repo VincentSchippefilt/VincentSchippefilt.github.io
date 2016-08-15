@@ -45,8 +45,10 @@ $on-laptop:        800px;
 
 .yearTable {
     width: 100%;
+    table-layout:fixed;
     td {
         width: 7.6%;
+        max-width: 7.6%;
         overflow: hidden;
     }
 }

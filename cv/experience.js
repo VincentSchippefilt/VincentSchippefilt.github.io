@@ -1,5 +1,5 @@
 function displayProjects(data) {
-    var years = [];
+    var expPerMonth = [];
     for (var y = new Date().getFullYear(); y >= 2008; y--) {
         var currentYear = {
             year: y,
@@ -12,6 +12,7 @@ function displayProjects(data) {
                 projects: []
             }
             data[0].Projects.forEach(function (project) {
+                project.N = project.ProjectShortName || project.ProjectName;
                 var startDate = new Date(Date.parse(project.StartDate));
                 var endDate = new Date(Date.parse(project.EndDate));
                 var shouldAddProject = false;
@@ -25,14 +26,13 @@ function displayProjects(data) {
                         if (startDate.getFullYear() == y && startDate.getMonth() <= m)
                             // the project starts the year y
                             shouldAddProject = true;
-
                         else if (endDate.getFullYear() == y && endDate.getMonth() >= m)
                             // the project ends the year y
                             shouldAddProject = true;
                         else
-                        if (startDate.getFullYear() != y && endDate.getFullYear() != y)
-                            // the project neither starts nor ends the year y, so it runs the full year
-                            shouldAddProject = true;
+                            if (startDate.getFullYear() != y && endDate.getFullYear() != y)
+                                // the project neither starts nor ends the year y, so it runs the full year
+                                shouldAddProject = true;
                     }
                 }
                 if (shouldAddProject)
@@ -41,7 +41,25 @@ function displayProjects(data) {
 
             currentYear.months.push(currentMonth);
         }
-        years.push(currentYear);
+        expPerMonth.push(currentYear);
     }
-    ko.applyBindings(years);
+
+    var maximumCountPerMonth = 0;
+    expPerMonth.forEach(function (year) {
+        year.months.forEach(function (month) {
+            if (month.projects.length > maximumCountPerMonth)
+                maximumCountPerMonth = month.projects.length;
+        })
+    });
+
+    var arrayOfCount=[];
+    for (var i = 0; i < maximumCountPerMonth; i++)
+        arrayOfCount.push(i);
+
+
+    ko.applyBindings({
+        expPerMonth: expPerMonth,
+        maximumCountPerMonth: maximumCountPerMonth,
+        arrayOfCount: arrayOfCount
+    });
 }
