@@ -5,18 +5,8 @@ permalink: /cv/
 ---
 
 <script src="data.js"></script> 
-<!--<script src="experience.js"></script>-->
 <!--<pre data-bind="text: ko.toJSON($data,2,2)"> </pre>-->
 
-<!--
-<div data-bind="foreach: expPerMonth">
-    <div data-bind="text: year"></div>
-    <div class="row row-no-padding" data-bind="foreach: months">
-        <div  class="col-xs-1"  data-bind="foreach: projects">
-            <div data-bind="text: N, style: {backgroundColor: color}"></div>
-        </div>
-    </div>
-</div>-->
 <div class="timeline">
     <!-- ko foreach: $data -->
     <span class="timeline-label ">
@@ -27,14 +17,13 @@ permalink: /cv/
         <span class="label label-default"  data-bind="text: year"></span>        
     </span>
 
-    <!-- ko foreach: projects -->
-    
+    <!-- ko foreach: projects -->    
     <div class="timeline-item">
         <div class="timeline-point timeline-point-default">
             <i class="fa" data-bind="css: 'fa-'+Project.Icon"></i>
         </div>
         <div class="timeline-event">
-            <div class="panel" data-bind="css:  'panel-' + Project.Importance">
+            <div class="panel" data-bind="css:  'panel-' + Project.Importance, attr:{'data-target': 'foot'+$index()+Project.ProjectName}" data-toggle="collapse" >
                 <div class="panel-heading">
                     <span class="panel-title" data-bind="text: Project.ProjectName + ' @ ' + Project.Customer"></span>
                     <!-- ko if: Project.DurationInMonth -->                    
@@ -42,10 +31,18 @@ permalink: /cv/
                     <!-- /ko -->
                 </div>
                 <div class="panel-body">
-                    <p>I was<span data-bind="text: ' '+Project.Function"></span></p>                    
+                    <p>I was<span data-bind="text: ' '+Project.Function"></span></p>
+                    <!-- ko if: Project.PeopleInvolved -->                                    
+                        <p>Team size: 
+                        <!-- ko foreach: new Array(parseInt(Project.PeopleInvolved))  -->
+                            <i class="fa fa-user"></i>
+                        <!-- /ko -->          
+                         (<span data-bind="text: Project.PeopleInvolved"> </span>)</p>      
+                    <!-- /ko -->                
+                                        
                 </div>
-                <!-- ko ifnot: Project.IsAside -->
-                <div class="panel-footer">
+                <!-- ko if: !Project.IsAside && Project.ProjectDescription -->
+                <div class="panel-footer collapse" data-bind="attr:{id:'foot'+$index()+Project.ProjectName}">
                     <p data-bind="text: Project.ProjectDescription"></p>
                 </div>
                 <!-- /ko -->                
@@ -124,7 +121,7 @@ permalink: /cv/
 </div>
 <script>  
 jQuery(document).ready(function() {
-    //displayProjects(data);
     ko.applyBindings(data);
+    //$('.collapse').collapse();
 })
 </script>
