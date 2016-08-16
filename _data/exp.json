@@ -17,13 +17,16 @@
                 "TechnicalEnvironment": "React, Redux, Node.js, Express, Heroku, Git, Visual Studio Code, SQL Server 2012, Javascript, HTML5, CSS3, ES6, Babel, Webpack, Bower, Npm, jQuery, Passport, Mocha",
                 "ProjectDescription": "Network KPI is a new web tool made for Toyota that allows them to gather KPIs from their NMSCs so that this data can be used in their PowerBI tools. This web tool replaces an Excel based solution with a much more user friendly interface conform with the Toyota styling standards and provides a more reliable way to get the correct data.",
                 "Function": "Solution Architect",
-                "JobDescription": "Member of an agile development team using the Scrum methodology and pair programming, functional analysis, pre-sales research and estimation, analysis, development, testing, integration, bugfixing"
+                "JobDescription": "Member of an agile development team using the Scrum methodology and pair programming, functional analysis, pre-sales research and estimation, analysis, development, testing, integration, bugfixing",
+                "Importance":"primary",
+                "Icon":"car"
             },
             {
                 "Customer": "Credoc",
                 "Sector": "Public",
                 "Website": "www.credoc.be",
                 "ProjectName": "Safe Transfer Protocol",
+                "ProjectShortName":"STP",
                 "StartDate": "2016-02-01",
                 "EndDate": "2016-04-30",
                 "ManDays": 40,
@@ -32,13 +35,16 @@
                 "TechnicalEnvironment": ".Net 4.6.1, Windows Services, Web.Api 2, Durandaljs",
                 "ProjectDescription": "",
                 "Function": "Architect, developer",
-                "JobDescription": "Define the functional and technical solution, coaching the development team to implement the solution.\nParticipate in the development of the solution (20%)"
+                "JobDescription": "Define the functional and technical solution, coaching the development team to implement the solution.\nParticipate in the development of the solution (20%)",
+                "Importance":"default",
+                "Icon":"book"
             },
             {
                 "Customer": "Total",
                 "Sector": "Energy & Utilities",
                 "Website": "http://www.total.be",
-                "ProjectName": "Contractors Portal",
+                "ProjectName": "Contractors Portal Support",
+                "ProjectShortName":"CP Sup",
                 "StartDate": "2015-03-01",
                 "EndDate": "2016-02-01",
                 "ManDays": 200,
@@ -47,13 +53,17 @@
                 "TechnicalEnvironment": ".NET 4.5.2, C#, MVC 5, Web API 2, Rest Services, ASP.NET Identity 2, Durandal.js, Require.js, Knockout.js, I18Next, Entity Framework 6, SQL Server 2012, IIS 8.5, Windows 2012, Bootstrap 3, Visual Studio 2013, VSTests, Jasime, Qunit, Git, TFS, VSO, Visual studio 2013, HTML 5, CSS 3, javascript",
                 "ProjectDescription": "Total Contractor Portal is the new web portal for contractors that want to work for Total Antwerp.\nIt is the main entry point for new contractors to present their company, offer their services to Total Antwerp, and request for an approval to make sure their employees are allowed to enter the different sites of Total.\nAs management tool it helps external contractors and Total employees in their daily administration. Documents, employee details and site entrance requests are handled and stored in one central place and the tool makes the follow-up of contractors and people access more transparent.\nContractors can register their company as a candidate for a collaboration with Total, manage their documents requested by Total, add and manage employees, add and manage sub-contractors and keep track of their own approval state.\nTotal coworkers can manage contractor requests in a structured way, keep track of documents needed to get approved as a contractor for Total Antwerp and handle the complete approval flow of companies and employee access to the different sites of Total Antwerp.",
                 "Function": "Solution Architect, development team lead",
-                "JobDescription": "Third line support, execute change requests (in Kanban)"
+                "JobDescription": "Third line support, execute change requests (in Kanban)",
+                 "IsAside":"true",
+                "Importance":"default",
+                "Icon":"industry"
             },
             {
                 "Customer": "Total",
                 "Sector": "Energy & Utilities",
                 "Website": "http://www.total.be",
                 "ProjectName": "Contractors Portal",
+                "ProjectShortName":"CP",
                 "StartDate": "2014-09-01",
                 "EndDate": "2015-02-28",
                 "ManDays": 448,
@@ -62,13 +72,16 @@
                 "TechnicalEnvironment": ".NET 4.5.2, C#, MVC 5, Web API 2, Rest Services, ASP.NET Identity 2, Durandal.js, Require.js, Knockout.js, I18Next, Entity Framework 6, SQL Server 2012, IIS 8.5, Windows 2012, Bootstrap 3, Visual Studio 2013, VSTests, Jasime, Qunit, Git, TFS, VSO, Visual studio 2013, HTML 5, CSS 3, javascript",
                 "ProjectDescription": "Total Contractor Portal is the new web portal for contractors that want to work for Total Antwerp.\nIt is the main entry point for new contractors to present their company, offer their services to Total Antwerp, and request for an approval to make sure their employees are allowed to enter the different sites of Total.\nAs management tool it helps external contractors and Total employees in their daily administration. Documents, employee details and site entrance requests are handled and stored in one central place and the tool makes the follow-up of contractors and people access more transparent.\nContractors can register their company as a candidate for a collaboration with Total, manage their documents requested by Total, add and manage employees, add and manage sub-contractors and keep track of their own approval state.\nTotal coworkers can manage contractor requests in a structured way, keep track of documents needed to get approved as a contractor for Total Antwerp and handle the complete approval flow of companies and employee access to the different sites of Total Antwerp.",
                 "Function": "Solution Architect, development team lead",
-                "JobDescription": "Member of an agile development team, Pair programming, Test-driven development, choose the framework"
+                "JobDescription": "Member of an agile development team, Pair programming, Test-driven development, choose the framework",
+                "Importance":"primary",
+                "Icon":"industry"
             },
             {
                 "Customer": "Atlas Copco",
                 "Sector": "Industry",
                 "Website": "http://www.atlascopco.com",
                 "ProjectName": "Master Data Loader",
+                "ProjectShortName":"MDL",
                 "StartDate": "2014-06-01",
                 "EndDate": "2014-09-15",
                 "ManDays": 150,
@@ -77,7 +90,9 @@
                 "TechnicalEnvironment": "WPF, XAML, WCF, Entity Framework 6, Sql Server 2012, web services (asmx), TFS, VSO, visual studio 2013, XML, SOAP",
                 "ProjectDescription": "Master data loader is a tool used by atlas copco to synchronize data coming from multiple sources into their Quotation system.\nIt includes loading, cleaning and computing of data coming from various sources (databases, files, other systems through webservices) and uploading them into the Quotation system using webservices.",
                 "Function": "Architect, analyst, developper, team leader",
-                "JobDescription": "For this small project, I did the architecture, analysis, management of the other developer and developped part of the application."
+                "JobDescription": "For this small project, I did the architecture, analysis, management of the other developer and developped part of the application.",
+                "Importance":"default",
+                "Icon":"compress"
             },
             {
                 "Customer": "Toyota",
@@ -85,20 +100,22 @@
                 "Website": "www.toyota.be",
                 "ProjectName": "T1",
                 "StartDate": "2014-01-01",
-                "EndDate": "2015-02-01",
+                "EndDate": "2014-06-01",
                 "ManDays": "~4000",
-                "PeopleInvolved": "~15",
+                "PeopleInvolved": "15",
                 "DurationInMonth": 13,
                 "TechnicalEnvironment": "Node js, javascript, grunt, jquery, css3, html5, bootstrap, scss, nunjucks, mongo db, C#, tridio, Git, Webstorm",
                 "ProjectDescription": "Recreate the entire customer facing website, for all websites in Europe and Russia:\nwww.toyota.be, www.toyota.it, www.toyota.fr, www.toyota.nl, etc.",
                 "Function": "Senior Consultant",
-                "JobDescription": "Analyse the performance of the application on all devices and make recommandations to improve the different performance KPI."
+                "JobDescription": "Analyse the performance of the application on all devices and make recommandations to improve the different performance KPI.",
+                "Importance":"default",
+                "Icon":"car"
             },
             {
                 "Customer": "Atlas Copco",
                 "Sector": "Industry",
                 "Website": "http://www.atlascopco.com",
-                "ProjectName": "Maintance iC³",
+                "ProjectName": "iC³ Maint",
                 "StartDate": "2013-10-01",
                 "EndDate": "2015-12-31",
                 "ManDays": "",
@@ -107,7 +124,10 @@
                 "TechnicalEnvironment": ".Net 4.5, WebApi 2.0, Asp.Net, Entity Framework 6, Javascript, ,HTML, CSS, Jquery, Knockoutjs, VSTests, TFS, VSO, Visual studio 2013, XML, JSON",
                 "ProjectDescription": "Review and enhance parts of IC³ developped in 2008",
                 "Function": "Analyst developer, PM",
-                "JobDescription": "Define priorities with the client\nImplement changes\nTest and deploy changes"
+                "JobDescription": "Define priorities with the client\nImplement changes\nTest and deploy changes",
+                "IsAside":"true",
+                "Importance":"default",
+                "Icon":"compress"
             },
             {
                 "Customer": "Atlas Copco",
@@ -117,87 +137,105 @@
                 "StartDate": "2013-02-01",
                 "EndDate": "2013-09-01",
                 "ManDays": "",
-                "PeopleInvolved": "",
+                "PeopleInvolved": "6",
                 "DurationInMonth": "",
                 "TechnicalEnvironment": ".Net 4.5, WebApi 2.0, ASP.NET, Entity Framework 5 - 6, Pair programming, TDD, Javascript, Jquery, Knockoutjs, Moq, VSTests, TFS, VSO, visual studio 2013, HTML, CSS, XML, XSD, XSLT",
                 "ProjectDescription": "The goal of this project was to rewrite and integrate in iC³ the tools the engeneering teams needed to support their new way of managing the proposal and contracting phase of the order process, using LEAN methodoligies.",
                 "Function": "Architect, Member of the development team, development team leader",
-                "JobDescription": "Design, code, test along with the other team members.\nCreate and present demo to the client\nSetup and maintain the continious delivery platform (using VSO)"
+                "JobDescription": "Design, code, test along with the other team members.\nCreate and present demo to the client\nSetup and maintain the continious delivery platform (using VSO)",
+                "Importance":"primary",
+                "Icon":"tasks"
             },
             {
                 "Customer": "SNCB/NMBS",
                 "Sector": "Public",
                 "Website": "http://www.belgianrail.be/",
                 "ProjectName": "Apollo – Replacement of plannification application",
+                "ProjectShortName":"Apollo",
                 "StartDate": "2012-04-01",
                 "EndDate": "2012-07-01",
                 "ManDays": "",
-                "PeopleInvolved": "",
+                "PeopleInvolved": "9",
                 "DurationInMonth": "",
                 "TechnicalEnvironment": "Oracle 10, .Net 3.5, WPF, XAML, WCF, Moq, NUnit, TFS, C#, Nhibernate, visual studio 2012",
                 "ProjectDescription": "The goal of the project Apollo is to create and update a set of applications that allows the central and local plannification of train drivers, for the mid and short term.",
                 "Function": "Senior .Net Developer",
-                "JobDescription": "- Member of the development team\n- Develop a central validation process for all the interface nourishing the current application\n- Develop validation rule engine"
+                "JobDescription": "- Member of the development team\n- Develop a central validation process for all the interface nourishing the current application\n- Develop validation rule engine",
+                "Importance":"default",
+                "Icon":"train"
             },
             {
                 "Customer": "D’Ieteren",
                 "Sector": "Transport",
                 "Website": "http://www.dieteren.be/dieteren-auto-en.html",
                 "ProjectName": "Mercure – Replacement of lotus notes applications in .Net",
+                "ProjectShortName":"Mercure",
                 "StartDate": "2012-03-01",
                 "EndDate": "2012-11-01",
                 "ManDays": "",
-                "PeopleInvolved": "",
+                "PeopleInvolved": "4",
                 "DurationInMonth": "",
                 "TechnicalEnvironment": "Sql Server 2008, Asp.Net, .Net 4.0, SSO, Active Directory, C#, Entity Framework 4.1-5, XHTML, CSS, JavaScript, Visual Studio 2010/.NET 4.5, Moq, Nunit, VSTest,TFS, VSO, visual studio 2012",
                 "ProjectDescription": "The goal of the project Mercure is to migrate all the IBM Domino/Notes infrastructure to Office 365 and Sharepoint Online. Not all the applications that were hosted in Domino were fitting those environments, so we have rewritten them as custom .NET web applications.",
                 "Function": "Architect, Senior .Net Developer",
-                "JobDescription": "- Follow-up and guide the development team\n- From September, member of the development team"
+                "JobDescription": "- Follow-up and guide the development team\n- From September, member of the development team",
+                "Importance":"default",
+                "Icon":"car"
             },
             {
                 "Customer": "Wit-Gele Kruis West-Vlaanderen",
                 "Sector": "Health",
                 "Website": "http://www.wgk.be/",
                 "ProjectName": "AFDA performance audit",
+                "ProjectShortName":"AFDA Perf",
                 "StartDate": "2011-07-01",
                 "EndDate": "2011-09-01",
-                "ManDays": "",
-                "PeopleInvolved": "",
+                "ManDays": "15",
+                "PeopleInvolved": "2",
                 "DurationInMonth": "",
                 "TechnicalEnvironment": ".net 4.0, WPF, XAML, WCF, Entity Framework 4, DevArt, Oracle, Unity, MVVM, MCV, async programming, visual studio  2010",
                 "ProjectDescription": "Find why the new application AFDA is not performing well, propose solutions. Lead the implementation of the solution.",
                 "Function": "Consultant",
-                "JobDescription": "Find why the new application AFDA is not performing well, propose solutions. Lead the implementation of the solution."
+                "JobDescription": "Find why the new application AFDA is not performing well, propose solutions. Lead the implementation of the solution.",
+                "Importance":"default",
+                "Icon":"plus"
             },
             {
                 "Customer": "Fortis",
                 "Sector": "Finance",
                 "Website": "https://www.bnpparibasfortis.be/portal/start_BE_F.asp",
                 "ProjectName": "Asset Security Modeling Tool",
+                "ProjectShortName":"ASM",
                 "StartDate": "2011-05-01",
                 "EndDate": "2011-05-01",
                 "ManDays": "",
-                "PeopleInvolved": "",
+                "PeopleInvolved": "3",
                 "DurationInMonth": "",
                 "TechnicalEnvironment": ".Net: Silverlight, WCF, SQL Server, Entity Framework 4, 4.1,  Visual Studio 2010, 2012",
                 "ProjectDescription": "Define the architecture of the new application, assist the functional analyst with the gathering and formalization of the requirements (functional and non functional).",
                 "Function": "Application Architect",
-                "JobDescription": "Define the architecture of the new application, assist the functional analyst with the gathering and formalization of the requirements (functional and non functional)."
+                "JobDescription": "Define the architecture of the new application, assist the functional analyst with the gathering and formalization of the requirements (functional and non functional).",
+                "Importance":"default",
+                "Icon":"building"
             },
             {
                 "Customer": "GFI",
                 "Sector": "Engineering/High-Tech",
                 "Website": "www.gfi.be",
                 "ProjectName": "Define migration from X to microsoft strategy",
+                "ProjectShortName":"to .Net",
                 "StartDate": "2011-04-01",
                 "EndDate": "2011-08-01",
                 "ManDays": "",
-                "PeopleInvolved": "",
+                "PeopleInvolved": "1",
                 "DurationInMonth": "",
                 "TechnicalEnvironment": "Domino, Notes, .Net, Sharepoint, Office 365",
                 "ProjectDescription": "As many of our clients are willing to migrate from their current situation, usually lotus notes based, to Microsoft solutions (especially sharepoint), GFI is willing to go one step further and propose them a single strategy to find the best possible solution for the client (sharepoint on premise or on the cloud, custom development or customization, …) using a single, unified approach.",
                 "Function": "Workgroup responsible",
-                "JobDescription": "Coordonate the information gathering, write the summary and the methodology of migrating from anything to the microsoft platform"
+                "JobDescription": "Coordonate the information gathering, write the summary and the methodology of migrating from anything to the microsoft platform",
+                "IsAside":"true",
+                "Importance":"default",
+                "Icon":"code-fork"
             },
             {
                 "Customer": "Fortis",
@@ -206,13 +244,15 @@
                 "ProjectName": "MoveDesk",
                 "StartDate": "2010-03-01",
                 "EndDate": "2010-03-01",
-                "ManDays": "",
-                "PeopleInvolved": "",
+                "ManDays": "10",
+                "PeopleInvolved": "4",
                 "DurationInMonth": "",
                 "TechnicalEnvironment": "Silverlight, WCF, SQL Server, Entity Framework 4, Visual Studio 2008",
                 "ProjectDescription": "Write an application that can manage the physical move of assets.",
                 "Function": "Application Architect/Team Lead/Technical Analyst/Developer",
-                "JobDescription": "? Refine the business analysis with the client and write the technical analysis, \n? Define the architecture of the solution,\n? Manage and coach a team of 3 junior developers + 2 developer,\n? Participate in the development of the solution,\n? Define the test environment, create continuous integration environment, \n? Realize integration and performance test on the client’s environment."
+                "JobDescription": "? Refine the business analysis with the client and write the technical analysis, \n? Define the architecture of the solution,\n? Manage and coach a team of 3 junior developers + 2 developer,\n? Participate in the development of the solution,\n? Define the test environment, create continuous integration environment, \n? Realize integration and performance test on the client’s environment.",
+                "Importance":"default",
+                "Icon":"building"
             },
             {
                 "Customer": "Atlas Copco",
@@ -227,7 +267,9 @@
                 "TechnicalEnvironment": "C#.NET 3.5, VSTS 2008, SQL Server 2005, WCF, ASP.NET, Codesmith, Nettiers, Moq, Nunit, TFS, Visual Studio 2008, 2010, HTML, CSS, Javascript",
                 "ProjectDescription": "Create a collaboration product allowing the different parties taking part or wanting to know about some custom design compressors, to:\n• Ensure that no duplicate request from the same client is evaluated by the engineers to avoid internal concurrency and misuse of HR (worldwide),\n• Ensure that the custom design compressors are described in a controlled and query-able way,\n• Manage the construction of custom design compressors from requirement to delivery, integrating with the current AtlasCopco’s production and reporting infrastructure,\n• Communicate with other parties, using dedicated methods or standard mails,\n• Manage the security of all the virtual components of the projects, allowing the power users to change the security rules using a complex set of conditions without any IT actions.",
                 "Function": "Application Architect/Team Lead/Technical Analyst/Developer",
-                "JobDescription": "? Refine the business analysis with the client and write the technical analysis, \n? Define the architecture of the solution,\n? Manage and coach a team of 3 junior developers + 2 developer,\n? Participate in the development of the solution,\n? Define the test environment, create continuous integration environment, \n? Realize integration and performance test on the client’s environment."
+                "JobDescription": "? Refine the business analysis with the client and write the technical analysis, \n? Define the architecture of the solution,\n? Manage and coach a team of 3 junior developers + 2 developer,\n? Participate in the development of the solution,\n? Define the test environment, create continuous integration environment, \n? Realize integration and performance test on the client’s environment.",
+                "Importance":"primary",
+                "Icon":"compress"
             },
             {
                 "Customer": "Electrabel",
@@ -237,12 +279,14 @@
                 "StartDate": "2008-05-01",
                 "EndDate": "2008-09-01",
                 "ManDays": "",
-                "PeopleInvolved": "",
+                "PeopleInvolved": "6",
                 "DurationInMonth": "",
                 "TechnicalEnvironment": ".NET 2.0, SQL Server 2005, Winform, Visual Studio 2005",
                 "ProjectDescription": "Writing a product to manage the gas networks and decision model based on it.",
                 "Function": "Developer",
-                "JobDescription": "Write code"
+                "JobDescription": "Write code",
+                "Importance":"default",
+                "Icon":"bolt"
             }
         ]
     },
@@ -265,7 +309,8 @@
                 "TechnicalEnvironment": "VB6, VB.Net, ASP, ASP.Net, DTS, SSIS, SQL Server 2000, SQL Server 2005, Com+, Clearcase, Visual Studio 6, Visual Studio .NET, HTML, CSS, Javascript",
                 "ProjectDescription": "Various projects as employee, mainly in the business intelligence, business support department",
                 "Function": "Analyst Developer",
-                "JobDescription": "Analyse, Develop, Maintain applications for the departements Business Intelligence, Business Suppoort, Risk and collateral management."
+                "JobDescription": "Analyse, Develop, Maintain applications for the departements Business Intelligence, Business Suppoort, Risk and collateral management.",
+                "Importance":"primary"
             }
         ]
     }

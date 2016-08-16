@@ -35,5 +35,27 @@ $on-laptop:        800px;
 //     }
 // }
 
+//@import "bootstrap-saas-3.3.7/stylesheets/_bootstrap.scss";
+@import "bootstrap-responsive-timeline/timeline.scss";
 // Import partials from the `minima` theme.
 @import "minima";
+.project {
+    display: inline-block;
+    border: solid 1px black;
+}
+
+.yearTable {
+    width: 100%;
+    table-layout:fixed;
+    td {
+        width: 7.6%;
+        max-width: 7.6%;
+        overflow: hidden;
+    }
+}
+.row-no-padding > [class*="col-"] {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    text-align: center;
+    border: 1px solid black;
+}
