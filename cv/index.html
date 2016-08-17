@@ -3,54 +3,64 @@ layout: page
 title: My CV
 permalink: /cv/
 ---
-<script src="data.js"></script> 
-<!--<pre data-bind="text: ko.toJSON($data,2,2)"> </pre>-->
-
 <div class="timeline">
-    <!-- ko foreach: $data -->
+{% for employer in site.data.exp %}
     <span class="timeline-label ">
-        <span class="label label-default"  data-bind="text: company.name"></span>        
-    </span>
-    <!-- ko foreach: company.activities -->
-    <span class="timeline-label ">
-        <span class="label label-default"  data-bind="text: year"></span>        
+        <span class="label label-default">{{ employer.Company }}</span>        
     </span>
 
-    <!-- ko foreach: projects -->    
+    {% assign start = employer.StartDate | date: "%Y" %}
+    {% assign end = employer.EndDate | default : 'now' | date: "%Y" %}
+    {% for year in (start..end) reversed %}    
+    <span class="timeline-label ">
+        <span class="label label-default">{{ year }}</span>        
+    </span>
+
+    {% for project in employer.Projects %}
+    {% assign projectStart  = project.StartDate | date : %Y | round %}
+    {% if projectStart == year %}
     <div class="timeline-item">
         <div class="timeline-point timeline-point-default">
-            <i class="fa" data-bind="css: 'fa-'+Project.Icon"></i>
+            <i class="fa fa-{{project.Icon}}"></i>
         </div>
         <div class="timeline-event">
-            <div class="panel" data-bind="css:  'panel-' + Project.Importance, attr:{'data-target': 'foot'+$index()+Project.ProjectName}" data-toggle="collapse" >
+            <div class="panel panel-{{project.Importance}}" data-target="#foot{{forloop.index}}{{project.ProjectName | replace: ' ', '' }}" 
+             data-toggle="collapse" >
                 <div class="panel-heading">
-                    <span class="panel-title" data-bind="text: Project.ProjectName + ' @ ' + Project.Customer"></span>
-                    <!-- ko if: Project.DurationInMonth -->                    
-                        <span class="panel-title pull-right" data-bind="text: Project.DurationInMonth + ' months' "></span>
-                    <!-- /ko -->
+                    <span class="panel-title">
+                    {{project.ProjectName}} @ {{project.Customer}}
+                    </span>
+                    {% if proejct.DurationInMonth != blank %}
+                        <span class="panel-title pull-right">{{project.DurationInMonth}} months</span>
+                    {% endif %}
                 </div>
                 <div class="panel-body">
-                    <p>I was<span data-bind="text: ' '+Project.Function"></span></p>
-                    <!-- ko if: Project.PeopleInvolved -->                                    
+                    <p>I was {{project.Function | downcase }}</p>
+                    {% if project.PeopleInvolved != blank %}                    
                         <p>Team size: 
-                        <!-- ko foreach: new Array(parseInt(Project.PeopleInvolved))  -->
+                        {% for i in (1..project.PeopleInvolved) %}                        
                             <i class="fa fa-user"></i>
-                        <!-- /ko -->          
-                         (<span data-bind="text: Project.PeopleInvolved"> </span>)</p>      
-                    <!-- /ko -->                
-                                        
+                        {% endfor %}
+                         <span>({{project.PeopleInvolved}})</span></p>                                                       
+                    {% endif %}                                        
                 </div>
-                <!-- ko if: !Project.IsAside && Project.ProjectDescription -->
-                <div class="panel-footer collapse" data-bind="attr:{id:'foot'+$index()+Project.ProjectName}">
-                    <p data-bind="text: Project.ProjectDescription"></p>
-                </div>
-                <!-- /ko -->                
+                    <div class="panel-footer collapse" id="foot{{forloop.index}}{{project.ProjectName | replace: ' ', ''}}">
+                        {% if project.ProjectDescription != blank %}                                                            
+                            <p>{{project.ProjectDescription|newline_to_br}}</p>
+                        {% endif %}  
+                        {% if project.JobDescription != blank %}                                                            
+                            <p><strong>My function: </strong>{{project.JobDescription|newline_to_br}}</p>
+                        {% endif %}
+                        {% if project.TechnicalEnvironment != blank %}                                                            
+                            <p><strong>Technical environment: </strong>{{project.TechnicalEnvironment|newline_to_br}}</p>
+                        {% endif %}                                            
+                    </div>
             </div>
         </div>
-    </div>
-    <!-- /ko -->
-    <!-- /ko -->
-    <!-- /ko -->
+    </div>{% endif %}{% endfor %}
+    {% endfor %}
+{% endfor %}
+
 </div>
 
 <div class="row">
@@ -120,7 +130,6 @@ permalink: /cv/
 </div>
 <script>  
 jQuery(document).ready(function() {
-    ko.applyBindings(data);
-    //$('.collapse').collapse();
+        //$('.collapse').collapse();
 })
 </script>
