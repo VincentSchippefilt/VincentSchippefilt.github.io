@@ -8,57 +8,29 @@ permalink: /cv/
     <span class="timeline-label ">
         <span class="label label-default">{{ employer.Company }}</span>        
     </span>
-
     {% assign start = employer.StartDate | date: "%Y" %}
     {% assign end = employer.EndDate | default : 'now' | date: "%Y" %}
-    {% for year in (start..end) reversed %}    
-    <span class="timeline-label ">
-        <span class="label label-default">{{ year }}</span>        
-    </span>
-
-    {% for project in employer.Projects %}
-    {% assign projectStart  = project.StartDate | date : %Y | round %}
-    {% if projectStart == year %}
-    <div class="timeline-item">
-        <div class="timeline-point timeline-point-default">
-            <i class="fa fa-{{project.Icon}}"></i>
-        </div>
-        <div class="timeline-event">
-            <div class="panel panel-{{project.Importance}}" data-target="#foot{{forloop.index}}{{project.ProjectName | replace: ' ', '' }}" 
-             data-toggle="collapse" >
-                <div class="panel-heading">
-                    <span class="panel-title">
-                    {{project.ProjectName}} @ {{project.Customer}}
-                    </span>
-                    {% if proejct.DurationInMonth != blank %}
-                        <span class="panel-title pull-right">{{project.DurationInMonth}} months</span>
-                    {% endif %}
-                </div>
-                <div class="panel-body">
-                    <p>I was {{project.Function | downcase }}</p>
-                    {% if project.PeopleInvolved != blank %}                    
-                        <p>Team size: 
-                        {% for i in (1..project.PeopleInvolved) %}                        
-                            <i class="fa fa-user"></i>
-                        {% endfor %}
-                         <span>({{project.PeopleInvolved}})</span></p>                                                       
-                    {% endif %}                                        
-                </div>
-                    <div class="panel-footer collapse" id="foot{{forloop.index}}{{project.ProjectName | replace: ' ', ''}}">
-                        {% if project.ProjectDescription != blank %}                                                            
-                            <p>{{project.ProjectDescription|newline_to_br}}</p>
-                        {% endif %}  
-                        {% if project.JobDescription != blank %}                                                            
-                            <p><strong>My function: </strong>{{project.JobDescription|newline_to_br}}</p>
-                        {% endif %}
-                        {% if project.TechnicalEnvironment != blank %}                                                            
-                            <p><strong>Technical environment: </strong>{{project.TechnicalEnvironment|newline_to_br}}</p>
-                        {% endif %}                                            
-                    </div>
-            </div>
-        </div>
-    </div>{% endif %}{% endfor %}
-    {% endfor %}
+    
+    {% if employer.Projects.size == 1 %}
+        <span class="timeline-label ">
+            <span class="label label-default">from {{ start }} until {{ end }}</span>        
+        </span>
+            {% for project in employer.Projects %}
+                    {% include projectTimeline.html %}            
+            {% endfor %}        
+    {% else %}    
+        {% for year in (start..end) reversed %}    
+            <span class="timeline-label ">
+                <span class="label label-default">{{ year }}</span>        
+            </span>
+            {% for project in employer.Projects %}
+                {% assign projectStart  = project.StartDate | date : %Y | round %}
+                {% if projectStart == year %}
+                    {% include projectTimeline.html %}
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+    {% endif %}
 {% endfor %}
 
 </div>
