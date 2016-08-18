@@ -3,17 +3,20 @@ layout: page
 title: My CV
 permalink: /cv/
 ---
-
-<div class="btn-group" data-toggle="buttons">
-  <label class="btn btn-primary active">
-    <input type="radio" name="options" id="showTimeline" autocomplete="off" checked /> Timeline
-  </label>
-  <label class="btn btn-primary">
-    <input type="radio" name="options" id="showTechnologies" autocomplete="off" /> Experience with technologies
-  </label>
-  <label class="btn btn-primary">
-    <input type="radio" name="options" id="showCalendar" autocomplete="off" /> Calendar view
-  </label>
+<div class="row">
+    <div class="col-xs-12"> 
+        <div class="btn-group btn-group-lg btn-group-justified" data-toggle="buttons">
+        <label class="btn btn-primary active">
+            <input type="radio" name="options" id="showTimeline" autocomplete="off" checked /> Timeline
+        </label>
+        <label class="btn btn-primary">
+            <input type="radio" name="options" id="showTechnologies" autocomplete="off" /> Technologies
+        </label>
+        <label class="btn btn-primary">
+            <input type="radio" name="options" id="showCalendar" autocomplete="off" /> Calendar view
+        </label>
+        </div>
+    </div>
 </div>
 <div class="timeline" id="experienceTimeline">
     {% for employer in site.data.exp %}
@@ -46,6 +49,10 @@ permalink: /cv/
     {% endfor %}
 </div>
 <div id="technologies">
+    <div class="row">
+        <div class="col-xs-12">&nbsp;</div>
+        <div class="clearfix"></div>
+    </div>
     {% assign tag_names = "" | split: "|"  %}
     {% for employer in site.data.exp %}
         {% for project in employer.Projects %}

@@ -73,3 +73,11 @@ $on-laptop:        1140px;
 #calendarView {
    display: none;    
 }
+
+nav {
+    .navbar-brand{
+        img {
+            margin-top: -10px;
+        }
+    }
+}
