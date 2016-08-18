@@ -59,3 +59,17 @@ $on-laptop:        800px;
     text-align: center;
     border: 1px solid black;
 }
+
+#experienceTimeline{
+    .panel {
+        cursor: pointer;       
+    }    
+}
+
+#technologies {
+   display: none;
+}
+
+#calendarView {
+   display: none;    
+}
