@@ -61,24 +61,15 @@ $on-laptop:        800px;
 }
 
 #experienceTimeline{
-    -moz-transition-property: all;
-    -webkit-transition-property: all;
-    transition-property:all;
-
-    -moz-transition-duration:1s; 
-    -webkit-transition-duration: 1s;
-    transition-duration: 1s;
-
-    -moz-transition-timing-function: ease-in;
-    -webkit-transition-timing-function: ease-in;
-    transition-timing-function: ease-in; 
-
     .panel {
-        cursor: pointer;
+        cursor: pointer;       
+    }    
+}
 
-        &:hover {
-            background-color:pink ;
-        }
-    }
-    
+#technologies {
+   display: none;
+}
+
+#calendarView {
+   display: none;    
 }
