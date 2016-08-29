@@ -10,3 +10,4 @@ bundle install
 run locally
 -----------
 bundle exec jekyll s
+bundle exec jekyll s --drafts 
