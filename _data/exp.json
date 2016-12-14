@@ -16,7 +16,7 @@
                 "PeopleInvolved": 3,
                 "DurationInMonth": 3,
                 "TechnicalEnvironment": ".NET 4.5.2, C#, MVC 5, Web API 2, Rest Services, ASP.NET Identity 2, Durandal.js, Require.js, Knockout.js, I18Next, Entity Framework 6, SQL Server 2012, IIS 8.5, Windows 2012, Bootstrap 3, VSTests, Jasime, Qunit, Git, TFS, VSTS, Visual Studio 2015, HTML 5, CSS 3, Javascript, Sftp, Azure Blob Storage, Azure WebSites, Azure WebJobs",
-                "ProjectDescription": "Migrate from a private host to Microsoft Azure environment.",
+                "ProjectDescription": "Migrate Contractors Portal from a private host to Microsoft Azure environment.",
                 "Function": "Solution Architect, development team lead",
                 "JobDescription": "Design the solution using Microsoft Azure services to host a complex web appication. Redesign all the interfaces with external systems using cheaper azure services.",
                 "IsAside": "false",
@@ -25,7 +25,7 @@
             },
             {
                 "Customer": "Gfi",
-                "Sector": "IT",
+                "Sector": "Engineering/High-Tech",
                 "Website": "https://www.gfi.be/",
                 "ProjectName": "Gfi Starter academy",
                 "StartDate": "2016-08-01",
@@ -36,7 +36,7 @@
                 "TechnicalEnvironment": "Agile, Scrum, Event Storming, Architecture, Managing complexity, DDD, TDD",
                 "ProjectDescription": "Teach a group of people who started working at Gfi after they graduated the basis of the different technologies, practices and methods Gfi uses on our projects.",
                 "Function": "Teacher",
-                "JobDescription": "Teach about architecture, Event Storming, managing complexity and DDD",
+                "JobDescription": "Teach about architectures, Event Storming, managing complexity and DDD",
                 "Importance": "primary",
                 "Icon": "graduation-cap"
             },
