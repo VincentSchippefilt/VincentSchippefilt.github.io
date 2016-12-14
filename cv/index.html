@@ -1,18 +1,18 @@
----
-layout: page
-title: My CV
-permalink: /cv/
+--- 
+layout: page 
+title: My CV 
+permalink: /cv/ 
 ---
 <div class="row">
-    <div class="col-xs-12"> 
+    <div class="col-xs-12">
         <div class="btn-group btn-group-lg btn-group-justified" data-toggle="buttons">
-        <label class="btn btn-primary active">
+            <label class="btn btn-primary active">
             <input type="radio" name="options" id="showTimeline" autocomplete="off" checked /> Timeline
         </label>
-        <label class="btn btn-primary">
+            <label class="btn btn-primary">
             <input type="radio" name="options" id="showTechnologies" autocomplete="off" /> Technologies
         </label>
-        <label class="btn btn-primary">
+            <label class="btn btn-primary">
             <input type="radio" name="options" id="showCalendar" autocomplete="off" /> Calendar view
         </label>
         </div>
@@ -20,91 +20,51 @@ permalink: /cv/
 </div>
 <div class="timeline" id="experienceTimeline">
     {% for employer in site.data.exp %}
-        <span class="timeline-label ">
-            <h1><span class="label label-info">{{ employer.Company }}</span></h1>        
-        </span>
-        {% assign start = employer.StartDate | date: "%Y" %}
-        {% assign end = employer.EndDate | default : 'now' | date: "%Y" %}
-        
-        {% if employer.Projects.size == 1 %}
-            <span class="timeline-label ">
-                <h3><span class="label label-default">from {{ start }} until {{ end }}</span></h3>        
-            </span>
-                {% for project in employer.Projects %}
-                        {% include projectTimeline.html %}            
-                {% endfor %}         
-        {% else %}    
-            {% for year in (start..end) reversed %}    
-                <span class="timeline-label ">
-                    <h3><span class="label label-default">{{ year }}</span></h3>        
-                </span>
-                {% for project in employer.Projects %}
-                    {% assign projectStart  = project.StartDate | date : %Y | round %}
-                    {% if projectStart == year %}
-                        {% include projectTimeline.html %}
-                    {% endif %}
-                {% endfor %}
-            {% endfor %}
-        {% endif %}
-    {% endfor %}
+    <span class="timeline-label ">
+            <h1><span class="label label-info">{{ employer.Company }}</span></h1>
+    </span>
+    {% assign start = employer.StartDate | date: "%Y" %} {% assign end = employer.EndDate | default : 'now' | date: "%Y" %} {%
+    if employer.Projects.size == 1 %}
+    <span class="timeline-label ">
+                <h3><span class="label label-default">from {{ start }} until {{ end }}</span></h3>
+    </span>
+    {% for project in employer.Projects %} {% include projectTimeline.html %} {% endfor %} {% else %} {% for year in (start..end)
+    reversed %}
+    <span class="timeline-label ">
+                    <h3><span class="label label-default">{{ year }}</span></h3>
+    </span>
+    {% for project in employer.Projects %} {% assign projectStart = project.StartDate | date : %Y | round %} {% if projectStart
+    == year %} {% include projectTimeline.html %} {% endif %} {% endfor %} {% endfor %} {% endif %} {% endfor %}
 </div>
 <div id="technologies">
     <div class="row">
         <div class="col-xs-12">&nbsp;</div>
         <div class="clearfix"></div>
     </div>
-    {% assign tag_names = "" | split: "|"  %}
-    {% for employer in site.data.exp %}
-        {% for project in employer.Projects %}
-            {% assign alltech =  project.TechnicalEnvironment | append: ", " | append: alltech %}
-            {% assign t = project.TechnicalEnvironment | split: ", " %}            
-            {% for e in t %}            
-                {% assign estripped= e | strip %}
-                {% assign tag_names = tag_names | push: estripped %}           
-            {% endfor %}
-        {% endfor %}
-    {% endfor %}
-
-    {% assign tag_names = tag_names | uniq | sort %}
-
-    {% assign monthes = "" | split: "|"  %}
-    {% assign maxMonthes=0 %}
-    {% for e in tag_names  %}
-        {% assign totalMonthes= 0 %}
-        {% for employer in site.data.exp %}
-            {% for project in employer.Projects %}
-                {% if project.TechnicalEnvironment contains e %}
-                    {% assign totalMonthes = project.DurationInMonth | round  | plus: totalMonthes  %} 
-                {% endif %}
-            {% endfor %}
-        {% endfor %}
-       
-       {% assign v = e | append: ',' | append:totalMonthes %}
-       {% assign monthes = monthes | push: v %}           
-       {% if totalMonthes > maxMonthes%}
-        {% assign maxMonthes = totalMonthes %}
-       {% endif %}
-    {% endfor %}
-
-    {% for e in monthes %}
+    {% assign tag_names = "" | split: "|" %} {% for employer in site.data.exp %} {% for project in employer.Projects %} {% assign
+    alltech = project.TechnicalEnvironment | append: ", " | append: alltech %} {% assign t = project.TechnicalEnvironment
+    | split: ", " %} {% for e in t %} {% assign estripped= e | strip %} {% assign tag_names = tag_names | push: estripped
+    %} {% endfor %} {% endfor %} {% endfor %} {% assign tag_names = tag_names | uniq | sort %} {% assign monthes = "" | split:
+    "|" %} {% assign maxMonthes=0 %} {% for e in tag_names %} {% assign totalMonthes= 0 %} {% for employer in site.data.exp
+    %} {% for project in employer.Projects %} {% if project.TechnicalEnvironment contains e %} {% assign totalMonthes = project.DurationInMonth
+    | round | plus: totalMonthes %} {% endif %} {% endfor %} {% endfor %} {% assign v = e | append: ',' | append:totalMonthes
+    %} {% assign monthes = monthes | push: v %} {% if totalMonthes > maxMonthes%} {% assign maxMonthes = totalMonthes %}
+    {% endif %} {% endfor %} {% for e in monthes %}
     <div class="row">
         <div class="col-lg-2 col-sm-3 col-xs-5">
-                {% assign item = e | split: ',' %}
-                    <span>{{item[0]}}</span>
+            {% assign item = e | split: ',' %}
+            <span>{{item[0]}}</span>
         </div>
         <div class="col-lg-10 col-sm-9 col-xs-7">
             <div class="progress">
-                <div class="progress-bar" role="progressbar" 
-                aria-valuenow="{{item[1]}}" aria-valuemin="0" 
-                aria-valuemax="{{maxMonthes}}" 
-                style="width: {{item[1] |round:2 | divided_by:maxMonthes | times: 100}}%;"
-                title="{{item[1]}} monthes">
-                {{item[1]}}
+                <div class="progress-bar" role="progressbar" aria-valuenow="{{item[1]}}" aria-valuemin="0" aria-valuemax="{{maxMonthes}}"
+                    style="width: {{item[1] |round:2 | divided_by:maxMonthes | times: 100}}%;" title="{{item[1]}} monthes">
+                    {{item[1]}}
                 </div>
             </div>
         </div>
     </div>
-    {% endfor %}    
+    {% endfor %}
 </div>
 <div id="calendarView">
     <div class="row">
@@ -124,12 +84,16 @@ permalink: /cv/
         <div class="col-xs-1">Nov</div>
         <div class="col-xs-1">Dev</div>
     </div>
-        2016
+    2016
     <div class="row row-no-padding">
-        <div style="background-color: rgb(94, 88, 162);" class="col-xs-2">CP Sup</div>
-        <div style="background-color: rgb(78, 114, 151);" class="col-xs-3 col-xs-offset-3 col-xs-pull-1">Net KPI</div>
-        <div style="background-color: rgb(73, 155, 128);" class="col-xs-3 col-xs-offset-2 col-xs-pull-1">STP</div>
-        
+        <div style="background-color: rgb(94, 88, 162);" class="col-xs-12">CP Sup</div>
+
+        <div style="background-color: rgb(78, 114, 151);" class="col-xs-3 col-xs-offset-4">Net KPI</div>
+        <div style="background-color: rgb(232, 183, 110);" class="col-xs-2">Gfi Starter Academy</div>
+        <div style="background-color: rgb(128, 192, 171);" class="col-xs-2 col-xs-offset-1">CP Azure</div>
+
+        <div style="background-color: rgb(73, 155, 128);" class="col-xs-10 col-xs-offset-2 col-xs-pull-1">STP</div>
+
     </div>2015
     <div class="row row-no-padding">
         <div style="background-color: rgb(232, 183, 110);" class="col-xs-2">CP</div>
@@ -138,39 +102,39 @@ permalink: /cv/
     </div>2014
     <div class="row row-no-padding">
         <div style="background-color: rgb(128, 192, 171);" class="col-xs-6">T1</div>
-        <div style="background-color: rgb(232, 183, 110);" class="col-xs-4 col-xs-offset-2">CP</div>    
-        <div style="background-color: rgb(131, 160, 190);" class="col-xs-4 col-xs-offset-6 col-xs-pull-1">MDL</div>    
-        <div style="background-color: rgb(145, 141, 198);" class="col-xs-12">iC³ Maint</div>    
+        <div style="background-color: rgb(232, 183, 110);" class="col-xs-4 col-xs-offset-2">CP</div>
+        <div style="background-color: rgb(131, 160, 190);" class="col-xs-4 col-xs-offset-6 col-xs-pull-1">MDL</div>
+        <div style="background-color: rgb(145, 141, 198);" class="col-xs-12">iC³ Maint</div>
     </div>
     2013
     <div class="row row-no-padding">
-        <div  style="background-color: rgb(255, 221, 169);" class="col-xs-8 col-xs-offset-1">PMA</div>
-        <div style="background-color: rgb(145, 141, 198);" class="col-xs-3">iC³ Maint</div>    
+        <div style="background-color: rgb(255, 221, 169);" class="col-xs-8 col-xs-offset-1">PMA</div>
+        <div style="background-color: rgb(145, 141, 198);" class="col-xs-3">iC³ Maint</div>
     </div>
     2012
     <div class="row row-no-padding">
-        <div  style="background-color: rgb(73, 155, 128);" class="col-xs-9 col-xs-offset-2">Mercure</div>
-        <div style="background-color: rgb(78, 114, 151);" class="col-xs-4 col-xs-offset-3">Apollo</div>    
+        <div style="background-color: rgb(73, 155, 128);" class="col-xs-9 col-xs-offset-2">Mercure</div>
+        <div style="background-color: rgb(78, 114, 151);" class="col-xs-4 col-xs-offset-3">Apollo</div>
     </div>
     2011
     <div class="row row-no-padding">
-        <div  style="background-color: rgb(131, 160, 190);" class="col-xs-5 col-xs-offset-3">to .Net</div>
-        <div style="background-color: rgb(232, 183, 110);" class="col-xs-1 col-xs-offset-4">ASM</div>    
-        <div style="background-color: rgb(94, 88, 162);" class="col-xs-3 col-xs-offset-1">AFDA Perf</div>    
+        <div style="background-color: rgb(131, 160, 190);" class="col-xs-5 col-xs-offset-3">to .Net</div>
+        <div style="background-color: rgb(232, 183, 110);" class="col-xs-1 col-xs-offset-4">ASM</div>
+        <div style="background-color: rgb(94, 88, 162);" class="col-xs-3 col-xs-offset-1">AFDA Perf</div>
     </div>
     2010
     <div class="row row-no-padding">
-        <div  style="background-color: rgb(145, 141, 198);" class="col-xs-3">iC³</div>
-        <div style="background-color: rgb(128, 192, 171);" class="col-xs-1 col-xs-offset-10 col-xs-pull-8">MoveDesk</div>    
+        <div style="background-color: rgb(145, 141, 198);" class="col-xs-3">iC³</div>
+        <div style="background-color: rgb(128, 192, 171);" class="col-xs-1 col-xs-offset-10 col-xs-pull-8">MoveDesk</div>
     </div>
     2009
     <div class="row row-no-padding">
-        <div  style="background-color: rgb(145, 141, 198);" class="col-xs-13">iC³</div>
+        <div style="background-color: rgb(145, 141, 198);" class="col-xs-13">iC³</div>
     </div>
     2008
     <div class="row row-no-padding">
-        <div  style="background-color: rgb(255, 221, 169);" class="col-xs-5 col-xs-offset-4">Pegase 2</div>    
-        <div  style="background-color: rgb(145, 141, 198);" class="col-xs-3">iC³</div>
+        <div style="background-color: rgb(255, 221, 169);" class="col-xs-5 col-xs-offset-4">Pegase 2</div>
+        <div style="background-color: rgb(145, 141, 198);" class="col-xs-3">iC³</div>
     </div>
 </div>
 <script>  
