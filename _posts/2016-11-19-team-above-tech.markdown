@@ -34,16 +34,16 @@ Imagine being a manager in a consulting company.
 You have skilled consultants on the bench on one side and you have projects or customers in need of skilled consultants on the other side. What do you do?
 Well I guess you would do what my manager did: split the team. Take a/some consultant(s) that are available and move them to other teams, or send them temporarily doing bodyshopping.
 
-Now I strongly belive that the hard part of projects lies in the people interractions, in the practices you implement and follow more than in the technology you use and master.
+Now I strongly believe that the hard part of projects lies in the people interactions, in the practices you implement and follow more than in the technology you use and master.
 
 I made this point many times but this year I set myself to prove it to my manager.
 
-Being the member of the Agile.Net team, for 10 years, my speciallity is mainly in Microsoft technologies but this year my team and I have successfully implemented a sharepoint project and a nodejs + react project on top of our regular Web + .Net stack projects.
+Being the member of the Agile.Net team, for 10 years, my specialty is mainly in Microsoft technologies but this year my team and I have successfully implemented a sharepoint project and a nodejs + react project on top of our regular Web + .Net stack projects.
 
 
 The big leap
 ===
 
-It is now time to take the ultimate step (for me). I will soon start on a Java project. With my team (even if again slightly modified). I hope to finally demonstrate that indeed, it is the people that matters, not the technologies you master. Of course being an architect means that I am used to master all the aspects on the things that I work with, which will not be the case in this time (Can anyone learn ALL java stuff in a month ?) but I think relying on good team members and proven practices will more then compansate for it.
+It is now time to take the ultimate step (for me). I will soon start on a Java project. With my team (even if again slightly modified). I hope to finally demonstrate that indeed, it is the people that matters, not the technologies you master. Of course being an architect means that I am used to master all the aspects on the things that I work with, which will not be the case in this time (Can anyone learn ALL java stuff in a month ?) but I think relying on good team members and proven practices will more then compensate for it.
 
 See you in a month or 3 for more on this new project.

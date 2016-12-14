@@ -38,7 +38,7 @@ To make it simple, even if I am not obsessed with every little byte, I want ever
 
 Control over the rendered page
 ------------------------------
-This is completely subjective. I am sure that people that master PHP and WordPress find it easy to take complete control over the engine, but it is no my case. I tried to let the layout and functionalities be driven by the themes and plugins, but the ecosystem in WordPress is vast. Finding a reasonnable template and theme takes away even more control. Adding plugins for the simplest things: event more control taken away.
+This is completely subjective. I am sure that people that master PHP and WordPress find it easy to take complete control over the engine, but it is no my case. I tried to let the layout and functionalities be driven by the themes and plugins, but the ecosystem in WordPress is vast. Finding a reasonable template and theme takes away even more control. Adding plugins for the simplest things: event more control taken away.
 
 Local debug
 ------------

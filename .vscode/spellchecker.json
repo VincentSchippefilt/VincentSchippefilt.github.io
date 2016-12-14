@@ -6,7 +6,15 @@
         "NUnit",
         "MSTest",
         "nobrainer",
-        "VSTS"
+        "VSTS",
+        "blog",
+        "WordPress",
+        "plugins",
+        "bodyshopping",
+        "sharepoint",
+        "nodejs",
+        "MySql",
+        "java"
     ],
     "documentTypes": [
         "markdown",
