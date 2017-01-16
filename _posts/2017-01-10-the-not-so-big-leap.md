@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "The not so big leap"
-date:   2016-11-19 11:40:00 +0200
+date:   2017-01-10 11:40:00 +0200
 categories: agile work
 ---
 
