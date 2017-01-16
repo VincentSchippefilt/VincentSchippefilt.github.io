@@ -33,3 +33,5 @@ tagline: Strive to improve!
 exclude: [commands.txt, README.md]
 
 
+gems:
+  - jekyll-toc
