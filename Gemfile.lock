@@ -77,6 +77,8 @@ GEM
     jekyll-seo-tag (1.4.0)
       jekyll (~> 3.0)
     jekyll-sitemap (0.10.0)
+    jekyll-toc (0.2.0)
+      nokogiri (~> 1.6)
     jekyll-watch (1.5.0)
       listen (~> 3.0, < 3.1)
     jemoji (0.6.2)
@@ -123,6 +125,7 @@ PLATFORMS
 DEPENDENCIES
   github-pages
   jekyll-github-metadata (~> 1.0)
+  jekyll-toc
   minima
 
 RUBY VERSION
