@@ -23,8 +23,7 @@ permalink: /cv/
     <span class="timeline-label ">
             <h1><span class="label label-info">{{ employer.Company }}</span></h1>
     </span>
-    {% assign start = employer.StartDate | date: "%Y" %} {% assign end = employer.EndDate | default : 'now' | date: "%Y" %} {%
-    if employer.Projects.size == 1 %}
+    {% assign start = employer.StartDate | date: "%Y" %} {% assign end = employer.EndDate | default : 'now' | date: "%Y" %} {% if employer.Projects.size == 1 %}
     <span class="timeline-label ">
                 <h3><span class="label label-default">from {{ start }} until {{ end }}</span></h3>
     </span>
@@ -42,11 +41,11 @@ permalink: /cv/
         <div class="clearfix"></div>
     </div>
     {% assign tag_names = "" | split: "|" %} {% for employer in site.data.exp %} {% for project in employer.Projects %} {% assign
-    alltech = project.TechnicalEnvironment | append: ", " | append: alltech %} {% assign t = project.TechnicalEnvironment
+    alltech = project.TechnicalCategories | append: ", " | append: alltech %} {% assign t = project.TechnicalCategories
     | split: ", " %} {% for e in t %} {% assign estripped= e | strip %} {% assign tag_names = tag_names | push: estripped
     %} {% endfor %} {% endfor %} {% endfor %} {% assign tag_names = tag_names | uniq | sort %} {% assign monthes = "" | split:
     "|" %} {% assign maxMonthes=0 %} {% for e in tag_names %} {% assign totalMonthes= 0 %} {% for employer in site.data.exp
-    %} {% for project in employer.Projects %} {% if project.TechnicalEnvironment contains e %} {% assign totalMonthes = project.DurationInMonth
+    %} {% for project in employer.Projects %} {% if project.TechnicalCategories contains e %} {% assign totalMonthes = project.DurationInMonth
     | round | plus: totalMonthes %} {% endif %} {% endfor %} {% endfor %} {% assign v = e | append: ',' | append:totalMonthes
     %} {% assign monthes = monthes | push: v %} {% if totalMonthes > maxMonthes%} {% assign maxMonthes = totalMonthes %}
     {% endif %} {% endfor %} {% for e in monthes %}
@@ -83,6 +82,11 @@ permalink: /cv/
         <div class="col-xs-1">Oct</div>
         <div class="col-xs-1">Nov</div>
         <div class="col-xs-1">Dev</div>
+    </div>
+    2017
+    <div class="row row-no-padding">
+        <div style="background-color: rgb(232, 183, 110);" class="col-xs-2">CharteGraph</div>
+    
     </div>
     2016
     <div class="row row-no-padding">
