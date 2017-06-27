@@ -11,11 +11,11 @@ $timeline-color-gray: #555;
 
 $timeline-colors: (
         default: $timeline-color-gray,
-        primary: $timeline-color-gray,
-        success: #3F8100,
-        info: #0062A7,
-        warning: #ac7e00,
-        danger: #B71500
+        primary: darken(#2C527A, 6.5%),
+        success: #499B80,
+        info: #5E58A2,
+        warning: #FFDDA9,
+        danger: #d9534f
 );
 
 $timeline-color-gray-light: #f5f5f5;
