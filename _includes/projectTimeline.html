@@ -19,7 +19,7 @@
                 {% if project.PeopleInvolved != empty %}                    
                     <p>Team size: 
                     {% for i in (1..project.PeopleInvolved) %}                        
-                        <i class="fa fa-user"></i>
+                        <span class="text-info"><i class="fa fa-user"></i></span>
                     {% endfor %}
                         <span>({{project.PeopleInvolved}})</span></p>                                                       
                 {% endif %}                                        

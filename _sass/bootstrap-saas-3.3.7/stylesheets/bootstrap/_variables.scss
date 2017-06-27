@@ -15,10 +15,10 @@ $gray:                   lighten($gray-base, 33.5%) !default; // #555
 $gray-light:             lighten($gray-base, 46.7%) !default; // #777
 $gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
 
-$brand-primary:         darken(#2C527A, 6.5%) !default; // #337ab7
+$brand-primary:         #e8b76e !default; // #337ab7
 $brand-success:         #499B80 !default;
-$brand-info:            #5E58A2 !default;
-$brand-warning:         #FFDDA9 !default;
+$brand-info:            #4e7297 !default;
+$brand-warning:         #e8b76e !default;
 $brand-danger:          #d9534f !default;
 
 
@@ -708,7 +708,7 @@ $list-group-link-heading-color: #333 !default;
 //##
 
 $panel-bg:                    #fff !default;
-$panel-body-padding:          15px !default;
+$panel-body-padding:          10px 15px !default;
 $panel-heading-padding:       10px 15px !default;
 $panel-footer-padding:        $panel-heading-padding !default;
 $panel-border-radius:         $border-radius-base !default;
