@@ -63,11 +63,12 @@ $on-laptop:        1140px;
 #experienceTimeline{
     .panel {
         cursor: pointer;       
-    }    
+    }  
+    display: none;  
 }
 
 #technologies {
-   display: none;
+  // display: none;
 }
 
 #calendarView {

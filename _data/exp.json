@@ -280,7 +280,7 @@
                 "PeopleInvolved": "3",
                 "DurationInMonth": 1,
                 "TechnicalEnvironment": ".Net: Silverlight, WCF, SQL Server, Entity Framework 4, Entity Framework 4.1, Visual Studio 2010, Visual Studio 2012",
-                "TechnicalCategories": ".Net: Silverlight, WCF, SQL Server, Entity Framework, Visual Studio",
+                "TechnicalCategories": "Silverlight, WCF, SQL Server, Entity Framework, Visual Studio",
                 "ProjectDescription": "Define the architecture of the new application, assist the functional analyst with the gathering and formalization of the requirements (functional and non functional).",
                 "Function": "Application Architect",
                 "JobDescription": "Define the architecture of the new application, assist the functional analyst with the gathering and formalization of the requirements (functional and non functional).",
