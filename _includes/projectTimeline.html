@@ -9,31 +9,31 @@
                 <span class="panel-title pull-left">
                 {{project.ProjectName}} @ {{project.Customer}}
                 </span>
-                {%- if project.DurationInMonth != empty -%}
+                {% if project.DurationInMonth != empty %}
                     <span class="panel-title pull-right">{{project.DurationInMonth}} months</span>
-                {%- endif -%}
+                {% endif %}
                 <div class="clearfix"></div>
             </div>
             <div class="panel-body">
                 <p>I was {{project.Function | downcase }}</p>
-                {%- if project.PeopleInvolved != empty -%}                    
+                {% if project.PeopleInvolved != empty %}                    
                     <p>Team size: 
-                    {%- for i in (1..project.PeopleInvolved) -%}                        
+                    {% for i in (1..project.PeopleInvolved) %}                        
                         <span class="text-info"><i class="fa fa-user"></i></span>
-                    {%- endfor -%}
+                    {% endfor %}
                         <span>({{project.PeopleInvolved}})</span></p>                                                       
-                {%- endif -%}                                        
+                {% endif %}                                        
             </div>
                 <div class="panel-footer collapse" id="foot{{forloop.index}}{{project.ProjectName | replace: ' ', ''}}">
-                    {%- if project.ProjectDescription != empty -%}                                                            
+                    {% if project.ProjectDescription != empty %}                                                            
                         <p>{{project.ProjectDescription|newline_to_br}}</p>
-                    {%- endif -%}  
-                    {%- if project.JobDescription != empty -%}                                                            
+                    {% endif %}  
+                    {% if project.JobDescription != empty %}                                                            
                         <p><strong>My function: </strong>{{project.JobDescription|newline_to_br}}</p>
-                    {%- endif -%}
-                    {%- if project.TechnicalEnvironment != empty -%}                                                            
+                    {% endif %}
+                    {% if project.TechnicalEnvironment != empty %}                                                            
                         <p><strong>Technical environment: </strong>{{project.TechnicalEnvironment|newline_to_br}}</p>
-                    {%- endif -%}                                            
+                    {% endif %}                                            
                 </div>
         </div>
     </div>
