@@ -3,38 +3,38 @@
         <i class="fa fa-{{project.Icon}}"></i>
     </div>
     <div class="timeline-event">
-        <div class="panel panel-{{project.Importance}}" data-target="#foot{{forloop.index}}{{project.ProjectName | replace: ' ', '' }}" 
-            data-toggle="collapse" >
+        <div class="panel panel-{{project.Importance}}" data-target="#foot{{forloop.index}}{{project.ProjectName | replace: ' ', '' }}"
+            data-toggle="collapse">
             <div class="panel-heading">
+                
                 <span class="panel-title pull-left">
-                {{project.ProjectName}} @ {{project.Customer}}
-                </span>
-                {% if project.DurationInMonth != empty %}
-                    <span class="panel-title pull-right">{{project.DurationInMonth}} months</span>
-                {% endif %}
+                    {{project.ProjectName}} @ 
+                    {% if project.Logo %}
+                    <img src="{{project.Logo}}" alt="{{project.Customer}}" title="{{project.Customer}}"/>
+                    {% else %}
+                    {{project.Customer}}
+                    {%endif%}
+                </span> {% if project.DurationInMonth != empty %}
+                <span class="panel-title pull-right">{{project.DurationInMonth}} months</span> {% endif %}
                 <div class="clearfix"></div>
             </div>
             <div class="panel-body">
                 <p>I was {{project.Function | downcase }}</p>
-                {% if project.PeopleInvolved != empty %}                    
-                    <p>Team size: 
-                    {% for i in (1..project.PeopleInvolved) %}                        
-                        <span class="text-info"><i class="fa fa-user"></i></span>
-                    {% endfor %}
-                        <span>({{project.PeopleInvolved}})</span></p>                                                       
-                {% endif %}                                        
+                {% if project.PeopleInvolved != empty %}
+                <p>Team size: {% for i in (1..project.PeopleInvolved) %}
+                    <span class="text-info"><i class="fa fa-user"></i></span> {% endfor %}
+                    <span>({{project.PeopleInvolved}})</span></p>
+                {% endif %}
             </div>
-                <div class="panel-footer collapse" id="foot{{forloop.index}}{{project.ProjectName | replace: ' ', ''}}">
-                    {% if project.ProjectDescription != empty %}                                                            
-                        <p>{{project.ProjectDescription|newline_to_br}}</p>
-                    {% endif %}  
-                    {% if project.JobDescription != empty %}                                                            
-                        <p><strong>My function: </strong>{{project.JobDescription|newline_to_br}}</p>
-                    {% endif %}
-                    {% if project.TechnicalEnvironment != empty %}                                                            
-                        <p><strong>Technical environment: </strong>{{project.TechnicalEnvironment|newline_to_br}}</p>
-                    {% endif %}                                            
-                </div>
+            <div class="panel-footer collapse" id="foot{{forloop.index}}{{project.ProjectName | replace: ' ', ''}}">
+                {% if project.ProjectDescription != empty %}
+                <p>{{project.ProjectDescription|newline_to_br}}</p>
+                {% endif %} {% if project.JobDescription != empty %}
+                <p><strong>My function: </strong>{{project.JobDescription|newline_to_br}}</p>
+                {% endif %} {% if project.TechnicalEnvironment != empty %}
+                <p><strong>Technical environment: </strong>{{project.TechnicalEnvironment|newline_to_br}}</p>
+                {% endif %}
+            </div>
         </div>
     </div>
 </div>
