@@ -1,10 +1,18 @@
-section 1
-  - item 1 S1
-  - item 2 S1
-  - item 3 S1
-  - item 4 S1
-section 2
-  - item 1 S2
-  - item 2 S2
-  - item 3 S2
-  - item 4 S2
+section:
+  - sectionName: Methodologies
+    content:
+    - title: Scrum
+    - title: Kanban
+    - title: XP
+    - title: TDD
+    - title: BDD
+  - sectionName: What I am good at
+    content:
+    - title: Teaching
+    - title: Pair programming
+    - title: TDD
+    - title: Working in agile teams
+    - title: Delivering value to customers
+    - title: Organizing workshops
+    - title: Debugging
+  

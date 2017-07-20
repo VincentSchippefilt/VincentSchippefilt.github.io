@@ -2,6 +2,7 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 @charset "utf-8";
+@import 'https://fonts.googleapis.com/css?family=Reenie+Beanie';
 
 // Our variables
 $base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -39,6 +40,7 @@ $on-laptop:        1140px;
 @import "bootstrap-responsive-timeline/timeline.scss";
 // Import partials from the `minima` theme.
 @import "minima";
+@import "postit.scss";
 .project {
     display: inline-block;
     border: solid 1px black;
@@ -64,11 +66,11 @@ $on-laptop:        1140px;
     .panel {
         cursor: pointer;       
     }  
-    display: none;  
+   // display: none;  
 }
 
 #technologies {
-  // display: none;
+   display: none;
 }
 
 .panel-heading{
@@ -91,4 +93,8 @@ nav {
             margin-top: -10px;
         }
     }
+}
+.rightColumn{
+    margin-top: 50px;
+ 
 }

@@ -9,11 +9,11 @@ permalink: /cv/
 <div class="row">
     <div class="col-xs-12">
         <div class="btn-group btn-group-lg btn-group-justified" data-toggle="buttons">
-            <label class="btn btn-primary ">
-                <input type="radio" name="options" id="showTimeline" autocomplete="off"  /> Timeline
-            </label>
             <label class="btn btn-primary active">
-                <input type="radio" name="options" id="showTechnologies" autocomplete="off"  checked/> Technologies
+                <input type="radio" name="options" id="showTimeline" autocomplete="off"  checked/> Timeline
+            </label>
+            <label class="btn btn-primary">
+                <input type="radio" name="options" id="showTechnologies" autocomplete="off"  /> Technologies
             </label>
         </div>
     </div>
@@ -71,8 +71,8 @@ permalink: /cv/
         </div>
 
     </div>
-    <div class="col-sm-4">
-        <div class="panel panel-default">
+    <div class="col-sm-4 rightColumn">
+        <div class="panel panel-default rightInfoBox">
             <!-- <div class="panel-heading">Panel heading without title</div> -->
             <div class="panel-body">
                 <canvas id="responsibilities">
@@ -81,6 +81,22 @@ permalink: /cv/
             </div>
         </div>
 
+        {% for sideSection in site.data.cv.section %}
+
+            <div class="rotate">        
+                <div class="postit">
+                    <div class="title">
+                        {{sideSection.sectionName}}
+                    </div>
+                    <ul>
+                     {% for sectionContent in sideSection.content %}
+                      <li>  {{sectionContent.title}}</li>
+                    {% endfor %}
+                    <ul>
+                </div>
+            </div>
+        {% endfor %}
+       
         <!-- <div class="panel panel-default">
             <div class="panel-heading">
                 <h3 class="panel-title">Panel title</h3>
@@ -104,10 +120,14 @@ permalink: /cv/
             $("#experienceTimeline").hide();
             $("#technologies").show();
         });
-
     })
 
-    
+{% for sideSection in site.data.cv.section %}
+    {{sideSection.sectionName}}
+    {% for sectionContent in sideSection.content %}
+        {{sectionContent.title}}
+    {% endfor %}
+{% endfor %}
   var gauges = 
   [
     {
