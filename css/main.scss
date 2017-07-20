@@ -94,7 +94,26 @@ nav {
         }
     }
 }
+
+@mixin rotatePostIt($angle) {
+    /* Safari */
+    -webkit-transform: rotate($angle+deg);
+    /* Firefox */
+    -moz-transform: rotate($angle+deg);
+    /* IE */
+    -ms-transform: rotate($angle+deg);
+    /* Opera */
+    -o-transform: rotate($angle+deg);
+    /* Opera */
+    transform: rotate($angle+deg);
+}
+
 .rightColumn{
     margin-top: 50px;
- 
+
+    @for $i from 1 through 9 {
+        :nth-child(#{$i}).rotate {
+            @include rotatePostIt(random(15)-7);
+        }
+    }
 }

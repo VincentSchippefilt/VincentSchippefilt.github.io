@@ -84,7 +84,7 @@ permalink: /cv/
         {% for sideSection in site.data.cv.section %}
 
             <div class="rotate">        
-                <div class="postit">
+                <div class="postit {% cycle 'yellow', 'orange', 'green', 'blue' %}">
                     <div class="title">
                         {{sideSection.sectionName}}
                     </div>
@@ -122,12 +122,6 @@ permalink: /cv/
         });
     })
 
-{% for sideSection in site.data.cv.section %}
-    {{sideSection.sectionName}}
-    {% for sectionContent in sideSection.content %}
-        {{sectionContent.title}}
-    {% endfor %}
-{% endfor %}
   var gauges = 
   [
     {
