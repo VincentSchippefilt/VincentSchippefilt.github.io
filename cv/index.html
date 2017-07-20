@@ -6,15 +6,7 @@ permalink: /cv/
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 
-<div class="row">
-    <div class="col-xs-12">
-        <div class="btn-group btn-group-lg btn-group-justified" data-toggle="buttons">
-            <label class="btn btn-primary">
-                Timeline
-            </label>            
-        </div>
-    </div>
-</div>
+
 <div class="row">
     <div class="col-sm-8">
         <div class="timeline" id="experienceTimeline">
@@ -37,7 +29,20 @@ permalink: /cv/
         </div>        
     </div>
     <div class="col-sm-4 rightColumn">
-        <div class="postit {% cycle 'orange', 'yellow', 'green', 'blue' %}" style="width: 390px">
+        <div class="rotate">
+            <div class="postit {% cycle 'blue', 'orange', 'yellow', 'green' %}">
+                <div class="title">
+                    <h1>Vincent Schippefilt</h1>
+                </div>
+                <h3>
+                    Solution Architect .Net & JS
+                </h3>
+                <h3>
+                    Solution Lead for Agile Fixed price projects
+                </h3>
+            </div>
+        </div>
+        <div class="postit {% cycle 'blue', 'orange', 'yellow', 'green' %}" style="width: 390px; margin-top: -10px;">
             <div class="title">
                 My current responsabilities
             </div>
@@ -46,7 +51,7 @@ permalink: /cv/
             </canvas>
         </div>
         <div class="rotate">
-            <div class="postit {% cycle 'orange', 'yellow', 'green', 'blue' %}">
+            <div class="postit {% cycle 'blue', 'orange', 'yellow', 'green' %}">
                 <div class="title">
                     My favorite technologies
                 </div>
@@ -113,7 +118,7 @@ permalink: /cv/
         {% for sideSection in site.data.cv.section %}
 
             <div class="rotate">        
-                <div class="postit {% cycle 'orange', 'yellow', 'green', 'blue' %}">
+                <div class="postit {% cycle 'blue', 'orange', 'yellow', 'green' %}">
                     <div class="title">
                         {{sideSection.sectionName}}
                     </div>
@@ -154,7 +159,7 @@ permalink: /cv/
             'Team lead',
             'Team member (dev, architect) in an agile team',
             'Candidate interviews',
-            'Organising and teaching @ Gfi'
+            'Organizing and teaching for Gfi Academy'
         ]
       },
     },
