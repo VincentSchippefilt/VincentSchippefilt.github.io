@@ -22,7 +22,8 @@
                 "JobDescription": "The project started by another team was lacking visibility over the results, my main contribution to the project was to organize the requirements into a backlog and run the project using Scrum. I also participated in the architecture of the solution and the development.",
                 "IsAside": "false",
                 "Importance": "default",
-                "Icon": "industry"
+                "Icon": "industry",
+                "Logo": "/cv/logo_total.png"
             },{
                 "Customer": "Total",
                 "Sector": "Energy & Utilities",
@@ -41,7 +42,8 @@
                 "JobDescription": "Design the solution using Microsoft Azure services to host a complex web appication. Redesign all the interfaces with external systems using cheaper azure services.",
                 "IsAside": "false",
                 "Importance": "default",
-                "Icon": "industry"
+                "Icon": "industry",
+                "Logo": "/cv/logo_total.png"
             },
             {
                 "Customer": "Gfi",
@@ -59,7 +61,8 @@
                 "Function": "Teacher",
                 "JobDescription": "Teach about architectures, Event Storming, managing complexity and DDD",
                 "Importance": "primary",
-                "Icon": "graduation-cap"
+                "Icon": "graduation-cap",
+                "Logo": "/cv/gfi.png"
             },
             {
                 "Customer": "Toyota",
@@ -77,7 +80,8 @@
                 "Function": "Solution Architect",
                 "JobDescription": "Member of an agile development team using the Scrum methodology and pair programming, functional analysis, pre-sales research and estimation, analysis, development, testing, integration, bugfixing",
                 "Importance": "primary",
-                "Icon": "car"
+                "Icon": "car",
+                "Logo": "/cv/toyota.png"
             },
             {
                 "Customer": "Credoc",
@@ -96,7 +100,8 @@
                 "Function": "Architect, developer",
                 "JobDescription": "Define the functional and technical solution, coaching the development team to implement the solution.\nParticipate in the development of the solution (20%)",
                 "Importance": "default",
-                "Icon": "book"
+                "Icon": "book",
+                "Logo": "/cv/fednot-logo.png"
             },
             {
                 "Customer": "Total",
@@ -116,7 +121,8 @@
                 "JobDescription": "Third line support, execute change requests (in Kanban)",
                 "IsAside": "true",
                 "Importance": "default",
-                "Icon": "industry"
+                "Icon": "industry",
+                "Logo": "/cv/logo_total.png"
             },
             {
                 "Customer": "Total",
@@ -135,7 +141,8 @@
                 "Function": "Solution Architect, development team lead",
                 "JobDescription": "Member of an agile development team, Pair programming, Test-driven development, choose the framework",
                 "Importance": "primary",
-                "Icon": "industry"
+                "Icon": "industry",
+                "Logo": "/cv/logo_total.png"
             },
             {
                 "Customer": "Atlas Copco",
@@ -154,7 +161,8 @@
                 "Function": "Architect, analyst, developper, team leader",
                 "JobDescription": "For this small project, I did the architecture, analysis, management of the other developer and developped part of the application.",
                 "Importance": "default",
-                "Icon": "compress"
+                "Icon": "compress",
+                "Logo": "/cv/atlascopco.png"
             },
             {
                 "Customer": "Toyota",
@@ -172,7 +180,8 @@
                 "Function": "Senior Consultant",
                 "JobDescription": "Analyse the performance of the application on all devices and make recommandations to improve the different performance KPI.",
                 "Importance": "default",
-                "Icon": "car"
+                "Icon": "car",
+                "Logo": "/cv/toyota.png"
             },
             {
                 "Customer": "Atlas Copco",
@@ -191,7 +200,8 @@
                 "JobDescription": "Define priorities with the client\nImplement changes\nTest and deploy changes",
                 "IsAside": "true",
                 "Importance": "default",
-                "Icon": "compress"
+                "Icon": "compress",
+                "Logo": "/cv/atlascopco.png"
             },
             {
                 "Customer": "Atlas Copco",
@@ -209,7 +219,8 @@
                 "Function": "Architect, Member of the development team, development team leader",
                 "JobDescription": "Design, code, test along with the other team members.\nCreate and present demo to the client\nSetup and maintain the continious delivery platform (using VSO)",
                 "Importance": "primary",
-                "Icon": "tasks"
+                "Icon": "tasks",
+                "Logo": "/cv/atlascopco.png"
             },
             {
                 "Customer": "SNCB/NMBS",
@@ -228,7 +239,8 @@
                 "Function": "Senior .Net Developer",
                 "JobDescription": "- Member of the development team\n- Develop a central validation process for all the interface nourishing the current application\n- Develop validation rule engine",
                 "Importance": "default",
-                "Icon": "train"
+                "Icon": "train",
+                "Logo": "/cv/sncb-logo.gif"
             },
             {
                 "Customer": "D’Ieteren",
@@ -247,7 +259,8 @@
                 "Function": "Architect, Senior .Net Developer",
                 "JobDescription": "- Follow-up and guide the development team\n- From September, member of the development team",
                 "Importance": "default",
-                "Icon": "car"
+                "Icon": "car",
+                "Logo": "/cv/dieteren-logo.jpg"
             },
             {
                 "Customer": "Wit-Gele Kruis West-Vlaanderen",
@@ -266,7 +279,8 @@
                 "Function": "Consultant",
                 "JobDescription": "Find why the new application AFDA is not performing well, propose solutions. Lead the implementation of the solution.",
                 "Importance": "default",
-                "Icon": "plus"
+                "Icon": "plus",
+                "Logo": "/cv/wgklogo.png"
             },
             {
                 "Customer": "Fortis",
@@ -285,10 +299,11 @@
                 "Function": "Application Architect",
                 "JobDescription": "Define the architecture of the new application, assist the functional analyst with the gathering and formalization of the requirements (functional and non functional).",
                 "Importance": "default",
-                "Icon": "building"
+                "Icon": "building",
+                "Logo": "/cv/bnpf-logo.svg"
             },
             {
-                "Customer": "GFI",
+                "Customer": "Gfi",
                 "Sector": "Engineering/High-Tech",
                 "Website": "www.gfi.be",
                 "ProjectName": "Define migration from X to microsoft strategy",
@@ -305,7 +320,8 @@
                 "JobDescription": "Coordonate the information gathering, write the summary and the methodology of migrating from anything to the microsoft platform",
                 "IsAside": "true",
                 "Importance": "default",
-                "Icon": "code-fork"
+                "Icon": "code-fork",
+                "Logo": "/cv/gfi.png"
             },
             {
                 "Customer": "Fortis",
@@ -323,7 +339,8 @@
                 "Function": "Application Architect/Team Lead/Technical Analyst/Developer",
                 "JobDescription": "? Refine the business analysis with the client and write the technical analysis, \n? Define the architecture of the solution,\n? Manage and coach a team of 3 junior developers + 2 developer,\n? Participate in the development of the solution,\n? Define the test environment, create continuous integration environment, \n? Realize integration and performance test on the client’s environment.",
                 "Importance": "default",
-                "Icon": "building"
+                "Icon": "building",
+                "Logo": "/cv/bnpf-logo.svg"
             },
             {
                 "Customer": "Atlas Copco",
@@ -341,7 +358,8 @@
                 "Function": "Application Architect/Team Lead/Technical Analyst/Developer",
                 "JobDescription": "? Refine the business analysis with the client and write the technical analysis, \n? Define the architecture of the solution,\n? Manage and coach a team of 3 junior developers + 2 developer,\n? Participate in the development of the solution,\n? Define the test environment, create continuous integration environment, \n? Realize integration and performance test on the client’s environment.",
                 "Importance": "primary",
-                "Icon": "compress"
+                "Icon": "compress",
+                "Logo": "/cv/atlascopco.png"
             },
             {
                 "Customer": "Electrabel",
@@ -359,7 +377,8 @@
                 "Function": "Developer",
                 "JobDescription": "Write code",
                 "Importance": "default",
-                "Icon": "bolt"
+                "Icon": "bolt",
+                "Logo": "/cv/electrabel.svg"
             }
         ]
     },
@@ -384,7 +403,8 @@
                 "ProjectDescription": "Various projects as employee, mainly in the business intelligence, business support department",
                 "Function": "Analyst Developer",
                 "JobDescription": "Analyse, Develop, Maintain applications for the departements Business Intelligence, Business Suppoort, Risk and collateral management.",
-                "Importance": "primary"
+                "Importance": "primary",
+                "Logo": "/cv/euroclear-logo.jpg"
             }
         ]
     }

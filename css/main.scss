@@ -71,6 +71,16 @@ $on-laptop:        1140px;
   // display: none;
 }
 
+.panel-heading{
+    img {
+        height:$base-font-size+3px;
+        // float: right;
+        // @media (max-width: $timeline-single-column-breakpoint){
+        //     display:hidden;
+        // }
+    }
+}
+
 #calendarView {
    display: none;    
 }
