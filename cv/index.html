@@ -9,12 +9,9 @@ permalink: /cv/
 <div class="row">
     <div class="col-xs-12">
         <div class="btn-group btn-group-lg btn-group-justified" data-toggle="buttons">
-            <label class="btn btn-primary active">
-                <input type="radio" name="options" id="showTimeline" autocomplete="off"  checked/> Timeline
-            </label>
             <label class="btn btn-primary">
-                <input type="radio" name="options" id="showTechnologies" autocomplete="off"  /> Technologies
-            </label>
+                Timeline
+            </label>            
         </div>
     </div>
 </div>
@@ -37,54 +34,86 @@ permalink: /cv/
             </span>
             {% for project in employer.Projects %} {% assign projectStart = project.StartDate | date : "%Y" | round %} {% if projectStart
             == year %} {% include projectTimeline.html %} {% endif %} {% endfor %} {% endfor %} {% endif %} {% endfor %}
-        </div>
-        <div id="technologies">
-            <div class="row">
-                <div class="col-xs-12">&nbsp;</div>
-                <div class="clearfix"></div>
-            </div>
-            {% assign tag_names = "" | split: "|" %} {% for employer in site.data.exp %} {% for project in employer.Projects %} {% assign
-            alltech = project.TechnicalCategories | append: ", " | append: alltech %} {% assign t = project.TechnicalCategories
-            | split: ", " %} {% for oneTech in t %} {% assign estripped= oneTech | strip %} {% assign tag_names = tag_names
-            | push: estripped %} {% endfor %} {% endfor %} {% endfor %} {% assign tag_names = tag_names | uniq | sort %}
-            {% assign monthes = "" | split: "|" %} {% assign maxMonthes=0 %} {% for oneTech in tag_names %} {% assign totalMonthes=
-            0 %} {% for employer in site.data.exp %} {% for project in employer.Projects %} {% if project.TechnicalCategories
-            contains oneTech %} {% assign totalMonthes = project.DurationInMonth | round | plus: totalMonthes %} {% endif
-            %} {% endfor %} {% endfor %} {% assign v = oneTech | append: ',' | append:totalMonthes %} {% assign monthes =
-            monthes | push: v %} {% if totalMonthes > maxMonthes%} {% assign maxMonthes = totalMonthes %} {% endif %} {%
-            endfor %} {% for e in monthes %}
-            <div class="row">
-                <div class="col-lg-2 col-sm-3 col-xs-5">
-                    {% assign item = e | split: ',' %}
-                    <span>{{item[0]}}</span>
-                </div>
-                <div class="col-lg-10 col-sm-9 col-xs-7">
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{item[1]}}" aria-valuemin="0" aria-valuemax="{{maxMonthes}}"
-                            style="width: {{item[1] |round:2 | divided_by:maxMonthes | times: 100}}%;" title="{{item[1]}} monthes">
-                            {{item[1]}}
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-
+        </div>        
     </div>
     <div class="col-sm-4 rightColumn">
-        <div class="panel panel-default rightInfoBox">
-            <!-- <div class="panel-heading">Panel heading without title</div> -->
-            <div class="panel-body">
-                <canvas id="responsibilities">
+        <div class="postit {% cycle 'orange', 'yellow', 'green', 'blue' %}" style="width: 390px">
+            <div class="title">
+                My current responsabilities
+            </div>
+            <canvas id="responsibilities">
 
-                </canvas>
+            </canvas>
+        </div>
+        <div class="rotate">
+            <div class="postit {% cycle 'orange', 'yellow', 'green', 'blue' %}">
+                <div class="title">
+                    My favorite technologies
+                </div>
+        
+                <div class="progress">
+                    <div 
+                        class="progress-bar progress-bar-success" 
+                        role="progressbar" 
+                        aria-valuenow="100"
+                        aria-valuemin="0" 
+                        aria-valuemax="100"
+                        style="width: 100%;">
+                        C#/.Net
+                    </div>              
+                </div>
+                <div class="progress">
+                    <div 
+                            class="progress-bar progress-bar-success" 
+                            role="progressbar" 
+                            aria-valuenow="100"
+                            aria-valuemin="0" 
+                            aria-valuemax="100"
+                            style="width: 100%;">
+                            Javascript/NodeJs/ES6
+                    </div>
+                </div>
+                <div class="progress">
+                    <div 
+                            class="progress-bar progress-bar-success" 
+                            role="progressbar" 
+                            aria-valuenow="85"
+                            aria-valuemin="0" 
+                            aria-valuemax="100"
+                            style="width: 85%;">
+                            React
+                    </div>
+                </div>
+                <div class="progress">
+                    <div 
+                            class="progress-bar progress-bar-success" 
+                            role="progressbar" 
+                            aria-valuenow="95"
+                            aria-valuemin="0" 
+                            aria-valuemax="100"
+                            style="width: 95%;">
+                            Sql Server
+                    </div>
+                </div>
+                <div class="progress">
+                    <div 
+                            class="progress-bar progress-bar-success" 
+                            role="progressbar" 
+                            aria-valuenow="15"
+                            aria-valuemin="0" 
+                            aria-valuemax="100"
+                            style="width: 15%;">
+                            MongoDb
+                    </div>
+                </div>
+                to see a full list of the technologies I have used over the years, <a href="/cv/technologies.html">follow this link</a>
             </div>
         </div>
 
         {% for sideSection in site.data.cv.section %}
 
             <div class="rotate">        
-                <div class="postit {% cycle 'yellow', 'orange', 'green', 'blue' %}">
+                <div class="postit {% cycle 'orange', 'yellow', 'green', 'blue' %}">
                     <div class="title">
                         {{sideSection.sectionName}}
                     </div>
@@ -97,54 +126,35 @@ permalink: /cv/
             </div>
         {% endfor %}
        
-        <!-- <div class="panel panel-default">
-            <div class="panel-heading">
-                <h3 class="panel-title">Panel title</h3>
-            </div>
-            <div class="panel-body">
-                Panel content
-            </div>
-        </div> -->
     </div>
 </div>
 
 <script>
-    jQuery(document).ready(function () {
-        $('#showTimeline').on('change', function () {
-            $("#calendarView").hide();
-            $("#technologies").hide();
-            $("#experienceTimeline").show();
-        });
-        $('#showTechnologies').on('change', function () {
-            $("#calendarView").hide();
-            $("#experienceTimeline").hide();
-            $("#technologies").show();
-        });
-    })
-
   var gauges = 
   [
     {
       elem:'responsibilities',
-      title:'Methodologies',
+      title:'Current responsabilities',
       chart:{
         datasets: 
         [
           {
-            data: [50, 20, 15, 10],
+            data: [20, 5, 55, 5, 15],
             backgroundColor: [
-              'rgb(232, 183, 110)',
+              'rgb(253,253,134)',
               'rgb(73, 155, 128)',
               'rgb(78, 114, 151)',
-              'rgb(94, 88, 162)'
+              'rgb(94, 88, 162)',
+              'rgb(128,192,171)'
             ]
           }
         ],
         labels: [
-            'Scrum',
-            'Kanban',
-            'Scrumban',
-            'Waterfall'
+            'Solution Lead Agile fixed price .Net and JS',
+            'Team lead',
+            'Team member (dev, architect) in an agile team',
+            'Candidate interviews',
+            'Organising and teaching @ Gfi'
         ]
       },
     },
@@ -156,8 +166,21 @@ permalink: /cv/
         data: gauges[elem].chart,
         options: {
           title:{
-            display: true,
+            display: false,
             text: gauges[elem].title || ''
+          },
+          legend: {
+              display: true,
+              fullWidth: false,
+              labels: {
+                  fontFamily: 'Reenie Beanie',
+                  fontSize: 17
+              },
+              position:'bottom',
+
+          },
+          tooltips: {
+              intersect: true,
           }
         }
     });
