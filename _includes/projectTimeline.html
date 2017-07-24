@@ -3,8 +3,17 @@
         <i class="fa fa-{{project.Icon}}"></i>
     </div>
     <div class="timeline-event">
+
+
+
         <div class="panel panel-{{project.Importance}}" data-target="#foot{{forloop.index}}{{project.ProjectName | replace: ' ', '' }}"
-            data-toggle="collapse">
+            data-toggle="collapse"
+             {% if forloop.first == true  and tooltipAdded <> "done" %}
+                data-step="1" data-intro="Click anywhere on the cards to see the details of the project"
+                {% assign tooltipAdded = "done" %}
+             {% endif %}
+            
+            >
             <div class="panel-heading">
                 
                 <span class="panel-title pull-left">
