@@ -21,7 +21,7 @@
   padding: map-get($timeline-container-paddings, vertical) map-get($timeline-container-paddings, horizontal);
 
   list-style: none;
-  font-weight: 300;
+  font-weight: 500;
 
   &:before {
     content: "";
@@ -128,7 +128,7 @@
 
       & .timeline-heading {
         & h4 {
-          font-weight: 400;
+          font-weight: 700;
         }
       }
 
