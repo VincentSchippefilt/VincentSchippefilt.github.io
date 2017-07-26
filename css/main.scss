@@ -63,9 +63,46 @@ $on-laptop:        1140px;
     border: 1px solid black;
 }
 
+@keyframes shakeit {
+    25% {
+        //@include rotate(5deg);
+        transform: translateY(-5px)
+    }
+    75% {
+       // @include rotate(-5deg);
+    }
+}
+
 #experienceTimeline{
-    .panel {
-        cursor: pointer;       
+    .panel.collapsed {
+        cursor: pointer;   
+        &:hover {
+            .panel-body {
+                &:after {
+                    animation-name: shakeit;
+                    animation-iteration-count:2;
+                    animation-duration: 0.5s;
+
+                }
+            }
+        }
+        .panel-body {
+            &:after {
+                content: " ";
+                position: absolute;
+                bottom: 1;
+                right: 50%;
+                margin: -2px 0;
+                border-right: 10px solid transparent;
+                border-top: 10px solid gray;
+                border-bottom: 10px solid transparent;
+                border-left: 10px solid transparent;
+               // @include rotate(45deg);
+
+
+            }
+            
+        }
     }  
 }
 
