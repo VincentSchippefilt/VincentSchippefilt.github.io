@@ -8,33 +8,7 @@ permalink: /cv/
 
 
 <div class="row">
-    <div class="col-sm-8">
-        <div class="timeline" id="experienceTimeline">
-            {% for employer in site.data.exp %}
-            <span class="timeline-label">
-                <h1><span class="label label-info">{{ employer.Company }}</span></h1>
-            </span>
-            {% assign start = employer.StartDate | date: "%Y" %} {% assign end = employer.EndDate | default : "now" | date: "%Y" %} {%
-            if employer.Projects.size == 1 %}
-            <span class="timeline-label ">
-                        <h3><span class="label label-success">from {{ start }} until {{ end }}</span></h3>
-            </span>
-            {% for project in employer.Projects %} {% include projectTimeline.html %} {% endfor %} {% else %} {% for year in (start..end)
-            reversed %}
-            <span class="timeline-label ">
-                    <h3><span class="label label-success">{{ year }}</span></h3>
-            </span>
-            {% for project in employer.Projects %}
-            
-
-            {% assign projectStart = project.StartDate | date : "%Y" | round %} {% if projectStart
-            == year %} 
-  
-            
-            {% include projectTimeline.html %} {% endif %} {% endfor %} {% endfor %} {% endif %} {% endfor %}
-        </div>        
-    </div>
-    <div class="col-sm-4 rightColumn">
+    <div class="col-sm-4 rightColumn pull-right">
         <div class="rotate">
             <div class="postit {% cycle 'blue', 'orange', 'yellow', 'green' %}">
                 <div class="title">
@@ -129,15 +103,42 @@ permalink: /cv/
                         {{sideSection.sectionName}}
                     </div>
                     <ul>
-                     {% for sectionContent in sideSection.content %}
-                      <li>  {{sectionContent.title}}</li>
+                        {% for sectionContent in sideSection.content %}
+                        <li>  {{sectionContent.title}}</li>
                     {% endfor %}
                     <ul>
                 </div>
             </div>
         {% endfor %}
-       
+        
     </div>
+    <div class="col-sm-8">
+        <div class="timeline" id="experienceTimeline">
+            {% for employer in site.data.exp %}
+            <span class="timeline-label">
+                <h1><span class="label label-info">{{ employer.Company }}</span></h1>
+            </span>
+            {% assign start = employer.StartDate | date: "%Y" %} {% assign end = employer.EndDate | default : "now" | date: "%Y" %} {%
+            if employer.Projects.size == 1 %}
+            <span class="timeline-label ">
+                        <h3><span class="label label-success">from {{ start }} until {{ end }}</span></h3>
+            </span>
+            {% for project in employer.Projects %} {% include projectTimeline.html %} {% endfor %} {% else %} {% for year in (start..end)
+            reversed %}
+            <span class="timeline-label ">
+                    <h3><span class="label label-success">{{ year }}</span></h3>
+            </span>
+            {% for project in employer.Projects %}
+            
+
+            {% assign projectStart = project.StartDate | date : "%Y" | round %} {% if projectStart
+            == year %} 
+  
+            
+            {% include projectTimeline.html %} {% endif %} {% endfor %} {% endfor %} {% endif %} {% endfor %}
+        </div>        
+    </div>
+
 </div>
 
 <script>

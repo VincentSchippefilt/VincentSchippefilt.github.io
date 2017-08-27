@@ -1,0 +1,44 @@
+.print {
+    * {
+    font-size: 12px;
+        -webkit-transition: none !important;
+        transition: none !important;
+    }
+
+
+    /*h1 {
+        display: none;
+    }*/
+    .postit {
+        .title {
+            h1 {
+                font-size:25px;
+                display: block;
+            }
+
+        }
+        h3 {
+            font-size: 12px;
+        }
+        .progress-bar {
+            font-size:12px;
+        }
+        #responsibilities {
+            width: 250px;
+            height: 250px;
+        }
+        max-width: 40%;
+        float: left;
+        ul {
+            li {
+                font-size:12px;                
+            }
+        }
+    }
+
+    
+
+    .progress-bar {
+        font-size: 12px;
+    }
+}
