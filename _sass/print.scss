@@ -1,14 +1,8 @@
 .print {
     * {
     font-size: 12px;
-        -webkit-transition: none !important;
-        transition: none !important;
     }
 
-
-    /*h1 {
-        display: none;
-    }*/
     .postit {
         .title {
             h1 {
@@ -28,6 +22,7 @@
             height: 250px;
         }
         max-width: 40%;
+        width: 250px;
         float: left;
         ul {
             li {
@@ -40,5 +35,11 @@
 
     .progress-bar {
         font-size: 12px;
+    }
+
+    .panel-body {
+        p {
+            margin-bottom:5px;
+        }
     }
 }

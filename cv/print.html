@@ -7,6 +7,7 @@ nav: false
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 
 <div class="print">
+    <div class="rotate">
     <div class="postit {% cycle 'blue', 'orange', 'yellow', 'green' %}">
         <div class="title">
             <h1>Vincent Schippefilt</h1>
@@ -19,93 +20,98 @@ nav: false
         </h3>
     </div>
 </div>
+<div class="rotate">
+        
+    <div class="postit {% cycle 'blue', 'orange', 'yellow', 'green' %}">
+        <div class="title">
+            My current responsabilities
+        </div>
+        <canvas id="responsibilities">
 
-<div class="postit {% cycle 'blue', 'orange', 'yellow', 'green' %}" style="width: 390px; margin-top: -10px;">
-    <div class="title">
-        My current responsabilities
+        </canvas>
     </div>
-    <canvas id="responsibilities">
 
-    </canvas>
 </div>
-
-<div class="postit {% cycle 'blue', 'orange', 'yellow', 'green' %}">
-    <div class="title">
-        My favorite technologies
-    </div>
-    <div class="progress">
-        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"
-            style="width: 100%;">
-            C#/.Net
+<div class="rotate">
+    <div class="postit {% cycle 'blue', 'orange', 'yellow', 'green' %}">
+        <div class="title">
+            My favorite technologies
         </div>
-    </div>
-    <div class="progress">
-        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"
-            style="width: 100%;">
-            Javascript/NodeJs/ES6
+        <div class="progress">
+            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"
+                style="width: 100%;">
+                C#/.Net
+            </div>
         </div>
-    </div>
-    <div class="progress">
-        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"
-            style="width: 85%;">
-            React
+        <div class="progress">
+            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"
+                style="width: 100%;">
+                Javascript/NodeJs/ES6
+            </div>
         </div>
-    </div>
-    <div class="progress">
-        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"
-            style="width: 95%;">
-            Sql Server
+        <div class="progress">
+            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"
+                style="width: 85%;">
+                React
+            </div>
         </div>
-    </div>
-    <div class="progress">
-        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"
-            style="width: 15%;">
-            MongoDb
+        <div class="progress">
+            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"
+                style="width: 95%;">
+                Sql Server
+            </div>
         </div>
+        <div class="progress">
+            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"
+                style="width: 15%;">
+                MongoDb
+            </div>
+        </div>
+        to see a full list of the technologies I have used over the years, <a href="/cv/technologies.html">follow this link</a>
     </div>
-    to see a full list of the technologies I have used over the years, <a href="/cv/technologies.html">follow this link</a>
+    
 </div>
-{% for sideSection in site.data.cv.section %}
-
-<div class="postit {% cycle 'blue', 'orange', 'yellow', 'green' %}">
-    <div class="title">
-        {{sideSection.sectionName}}
-    </div>
-    <ul>
-        {% for sectionContent in sideSection.content %}
-        <li> {{sectionContent.title}}</li>
-        {% endfor %}
+    {% for sideSection in site.data.cv.section %}
+    <div class="rotate">
+            
+    <div class="postit {% cycle 'blue', 'orange', 'yellow', 'green' %}">
+        <div class="title">
+            {{sideSection.sectionName}}
+        </div>
         <ul>
-</div>
-
-{% endfor %}
-</div>
-
-<div class="row">
-    <div class="col-sm-12">
-        <div class="timeline" id="experienceTimeline">
-            {% for employer in site.data.exp %}
-            <span class="timeline-label">
-                <h1><span class="label label-info">{{ employer.Company }}</span></h1>
-            </span>
-            {% assign start = employer.StartDate | date: "%Y" %} {% assign end = employer.EndDate | default : "now" | date: "%Y" %} {%
-            if employer.Projects.size == 1 %}
-            <span class="timeline-label ">
-                        <h3><span class="label label-success">from {{ start }} until {{ end }}</span></h3>
-            </span>
-            {% for project in employer.Projects %} {% include projectTimelinePrint.html %} {% endfor %} {% else %} {% for year in (start..end)
-            reversed %}
-            <span class="timeline-label ">
-                <h3><span class="label label-success">{{ year }}</span></h3>
-            </span>
-            {% for project in employer.Projects %} {% assign projectStart = project.StartDate | date : "%Y" | round %} {% if projectStart
-            == year %} {% include projectTimelinePrint.html %} {% endif %} {% endfor %} {% endfor %} {% endif %} {% endfor
-            %}
-        </div>
+            {% for sectionContent in sideSection.content %}
+            <li> {{sectionContent.title}}</li>
+            {% endfor %}
+            <ul>
     </div>
+    </div>
+    {% endfor %}
 
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="timeline" id="experienceTimeline">
+                {% for employer in site.data.exp %}
+                <span class="timeline-label">
+                    <h1><span class="label label-info">{{ employer.Company }}</span></h1>
+                </span>
+                {% assign start = employer.StartDate | date: "%Y" %} {% assign end = employer.EndDate | default : "now" | date: "%Y" %} {%
+                if employer.Projects.size == 1 %}
+                <span class="timeline-label ">
+                            <h3><span class="label label-success">from {{ start }} until {{ end }}</span></h3>
+                </span>
+                {% for project in employer.Projects %} {% include projectTimelinePrint.html %} {% endfor %} {% else %} {% for year in (start..end)
+                reversed %}
+                <span class="timeline-label ">
+                    <h3><span class="label label-success">{{ year }}</span></h3>
+                </span>
+                {% for project in employer.Projects %} {% assign projectStart = project.StartDate | date : "%Y" | round %} {% if projectStart
+                == year %} {% include projectTimelinePrint.html %} {% endif %} {% endfor %} {% endfor %} {% endif %} {% endfor
+                %}
+            </div>
+        </div>
+
+    </div>
 </div>
-
 <script>
     var gauges =
         [
@@ -158,7 +164,8 @@ nav: false
                 },
                 tooltips: {
                     intersect: true,
-                }
+                },
+                width: 250,
             }
         });
     }
