@@ -141,7 +141,7 @@ nav {
 .rotateContainer{
     //margin-top: 50px;
 
-    @for $i from 1 through 9 {
+    @for $i from 1 through 10 {
         :nth-child(#{$i}).rotate {
             @include rotatePostIt(random(10)-5);
         }
