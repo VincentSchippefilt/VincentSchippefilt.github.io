@@ -161,7 +161,7 @@
 
       position: absolute;
       z-index: 100;
-
+      page-break-inside: avoid;
       border: {
         width: $timeline-point-border-width;
         style: solid;
@@ -207,7 +207,7 @@
     }
   }
 }
-
+/*
 @media all and (orientation: portrait) {
   .timeline {
     @include timeline-single-column;
@@ -218,4 +218,4 @@
   .timeline {
     @include timeline-single-column;
   }
-}
+}*/

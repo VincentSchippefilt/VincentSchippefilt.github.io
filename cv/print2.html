@@ -1,14 +1,14 @@
 --- 
-layout: page 
+layout: pageprint
 title: My resume 
-permalink: /cv/ 
+permalink: /cv/print2
 ---
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 
-
+<div class="print2">
 <div class="row">
-    <div class="col-sm-4 rotateContainer pull-right">
+    <div class="col-xs-4 rotateContainer pull-right">
         <div class="rotate">
             <div class="postit {% cycle 'blue', 'orange', 'yellow', 'green' %}">
                 <div class="title">
@@ -22,7 +22,7 @@ permalink: /cv/
                 </h3>
             </div>
         </div>
-        <div class="postit {% cycle 'blue', 'orange', 'yellow', 'green' %}" style="width: 390px; margin-top: -10px;">
+        <div class="postit {% cycle 'blue', 'orange', 'yellow', 'green' %}" style="width: 390px;">
             <div class="title">
                 My current responsibilities
             </div>
@@ -91,7 +91,7 @@ permalink: /cv/
                             MongoDb
                     </div>
                 </div>
-                to see a full list of the technologies I have used over the years, <a href="/cv/technologies.html">follow this link</a>
+                to see a full list of the technologies I have used over the years, <a href="/cv/technologies.html">follow this link (http://www.schippefilt.com/cv/technologies/html)</a>
             </div>
         </div>
 
@@ -110,9 +110,34 @@ permalink: /cv/
                 </div>
             </div>
         {% endfor %}
-        
+        <div>
+            here is a hole bunch of tech I have used and how many months I have used them <br/>
+          
+            {% assign tag_names = "" | split: "|" %} {% for employer in site.data.exp %} {% for project in employer.Projects %} {% assign
+            alltech = project.TechnicalCategories | append: ", " | append: alltech %} {% assign t = project.TechnicalCategories | split:
+            ", " %} {% for oneTech in t %} {% assign estripped= oneTech | strip %} {% assign tag_names = tag_names | push: estripped
+            %} {% endfor %} {% endfor %} {% endfor %} {% assign tag_names = tag_names | uniq | sort %} {% assign monthes = "" | split:
+            "|" %} {% assign maxMonthes=0 %} {% for oneTech in tag_names %} {% assign totalMonthes= 0 %} {% for employer in site.data.exp
+            %} {% for project in employer.Projects %} {% if project.TechnicalCategories contains oneTech %} {% assign totalMonthes =
+            project.DurationInMonth | round | plus: totalMonthes %} {% endif %} {% endfor %} {% endfor %} {% assign v = oneTech | append:
+            ',' | append:totalMonthes %} {% assign monthes = monthes | push: v %} {% if totalMonthes > maxMonthes%} {% assign maxMonthes
+            = totalMonthes %} {% endif %} {% endfor %} {% for e in monthes %}
+           
+                    {% assign item = e | split: ',' %}
+                    <span>{{item[0]}}</span>
+              
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{item[1]}}" aria-valuemin="0" aria-valuemax="{{maxMonthes}}"
+                            style="width: {{item[1] |round:2 | divided_by:maxMonthes | times: 100}}%;" title="{{item[1]}} monthes">
+                            {{item[1]}}
+                        </div>
+                    </div>
+                    {% endif%}
+            {% endfor %}
+        </div>
+
     </div>
-    <div class="col-sm-8">
+    <div class="col-xs-8">
         <div class="timeline" id="experienceTimeline">
             {% for employer in site.data.exp %}
             <span class="timeline-label">
@@ -126,7 +151,7 @@ permalink: /cv/
             {% for project in employer.Projects %} {% include projectTimeline.html %} {% endfor %} {% else %} {% for year in (start..end)
             reversed %}
             <span class="timeline-label ">
-                    <h3><span class="label label-success">{{ year }}</span></h3>
+                <h3><span class="label label-success">{{ year }}</span></h3>
             </span>
             {% for project in employer.Projects %}
             
@@ -135,12 +160,12 @@ permalink: /cv/
             == year %} 
   
             
-            {% include projectTimeline.html %} {% endif %} {% endfor %} {% endfor %} {% endif %} {% endfor %}
+            {% include projectTimelinePrint.html %} {% endif %} {% endfor %} {% endfor %} {% endif %} {% endfor %}
         </div>        
     </div>
 
 </div>
-
+</div>
 <script>
   var gauges = 
   [

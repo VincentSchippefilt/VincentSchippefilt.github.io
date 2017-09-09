@@ -1,13 +1,12 @@
 --- 
-layout: page 
+layout: pageprint 
 permalink: /cv/print 
 nav: false 
 ---
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
-
 <div class="print">
-    <div class="rotate">
+   <!-- <div class="rotate">
         <div class="postit {% cycle 'blue', 'orange', 'yellow', 'green' %}">
             <div class="title">
                 <h1>Vincent Schippefilt</h1>
@@ -20,28 +19,16 @@ nav: false
             </h3>
         </div>
     </div>
-<<<<<<< HEAD
-</div>
-<div class="rotate">
-        
-    <div class="postit {% cycle 'blue', 'orange', 'yellow', 'green' %}">
-        <div class="title">
-            My current responsibilities
-        </div>
-        <canvas id="responsibilities">
-=======
-    <div class="rotate">
->>>>>>> 1e01eb7b68696385b096a4c07a3bf814772eb7d2
 
-        <div class="postit {% cycle 'blue', 'orange', 'yellow', 'green' %}">
+    <div class="rotate">
+        <div class="postit {% cycle 'blue', 'orange', 'yellow', 'green' %}" style="width: 345px;">
             <div class="title">
-                My current responsabilities
+                My current responsibilities
             </div>
-            <canvas id="responsibilities">
+            <canvas id="resp">
 
             </canvas>
         </div>
-
     </div>
     <div class="rotate">
         <div class="postit {% cycle 'blue', 'orange', 'yellow', 'green' %}">
@@ -93,42 +80,38 @@ nav: false
                 {% for sectionContent in sideSection.content %}
                 <li> {{sectionContent.title}}</li>
                 {% endfor %}
-                <ul>
+            <ul>
         </div>
     </div>
-    {% endfor %}
-</div>
-<div class="print">
-    <div class="row">
-        <div class="col-sm-12">
-            <div class="timeline" id="experienceTimeline">
-                {% for employer in site.data.exp %}
-                <span class="timeline-label">
-                    <h1><span class="label label-info">{{ employer.Company }}</span></h1>
-                </span>
-                {% assign start = employer.StartDate | date: "%Y" %} {% assign end = employer.EndDate | default : "now" | date: "%Y" %} {%
-                if employer.Projects.size == 1 %}
-                <span class="timeline-label ">
-                            <h3><span class="label label-success">from {{ start }} until {{ end }}</span></h3>
-                </span>
-                {% for project in employer.Projects %} {% include projectTimelinePrint.html %} {% endfor %} {% else %} {% for year in (start..end)
-                reversed %}
-                <span class="timeline-label ">
-                    <h3><span class="label label-success">{{ year }}</span></h3>
-                </span>
-                {% for project in employer.Projects %} {% assign projectStart = project.StartDate | date : "%Y" | round %} {% if projectStart
-                == year %} {% include projectTimelinePrint.html %} {% endif %} {% endfor %} {% endfor %} {% endif %} {% endfor
-                %}
-            </div>
+    {% endfor %}-->
+<div class="row">
+    <div class="col-sm-12">
+        <div class="timeline" id="experienceTimeline">
+            {% for employer in site.data.exp %}
+            <span class="timeline-label">
+                        <h1><span class="label label-info">{{ employer.Company }}</span></h1>
+            </span>
+            {% assign start = employer.StartDate | date: "%Y" %} {% assign end = employer.EndDate | default : "now" | date: "%Y" %} {%
+            if employer.Projects.size == 1 %}
+            <span class="timeline-label ">
+                                <h3><span class="label label-success">from {{ start }} until {{ end }}</span></h3>
+            </span>
+            {% for project in employer.Projects %} {% include projectTimelinePrint.html %} {% endfor %} {% else %} {% for year in (start..end)
+            reversed %}
+            <span class="timeline-label ">
+                        <h3><span class="label label-success">{{ year }}</span></h3>
+            </span>
+            {% for project in employer.Projects %} {% assign projectStart = project.StartDate | date : "%Y" | round %} {% if projectStart
+            == year %} {% include projectTimelinePrint.html %} {% endif %} {% endfor %} {% endfor %} {% endif %} {% endfor
+            %}
         </div>
-
     </div>
 </div>
 <script>
     var gauges =
         [
             {
-                elem: 'responsibilities',
+                elem: 'resp',
                 title: 'Current responsibilities',
                 chart: {
                     datasets:

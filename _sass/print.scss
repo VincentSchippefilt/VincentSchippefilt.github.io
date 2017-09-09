@@ -1,4 +1,65 @@
+.print2 {
+    width: 9.25in;
+    //border: 1px solid black;
+
+    * {
+    font-size: 12px;
+    }
+
+    .postit {
+        .title {
+            h1 {
+                font-size:25px;
+                display: block;
+            }
+
+        }
+        h3 {
+            font-size: 12px;
+        }
+        .progress-bar {
+            font-size:12px;
+        }
+        #responsibilities {
+            width: 250px;
+            height: 250px;
+        }
+        max-width: 40%;
+        width: 250px;
+        ul {
+            li {
+                font-size:14px;                
+            }
+        }
+    }
+
+    .progress-bar {
+        font-size: 14px;
+    }
+
+    .panel-body {
+        p {
+            margin-bottom:5px;
+        }
+    }
+
+    .panel {
+        page-break-inside: avoid;
+    }
+
+    .progress {
+        height: 24px;
+        margin-bottom: 18px;
+        .progress-bar {
+            line-height: 24px;
+        }
+    }
+}
+
 .print {
+    width: 9.25in;
+    //border: 1px solid black;
+
     * {
     font-size: 12px;
     }
@@ -26,13 +87,13 @@
         float: left;
         ul {
             li {
-                font-size:12px;                
+                font-size:14px;                
             }
         }
     }
 
     .progress-bar {
-        font-size: 12px;
+        font-size: 142px;
     }
 
     .panel-body {

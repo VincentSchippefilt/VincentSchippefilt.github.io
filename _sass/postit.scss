@@ -16,6 +16,7 @@
     display:inline-block;    
   
     padding-bottom: 5px;
+    page-break-inside: avoid;
 
     &.yellow {
       $baseColor: #ffff88;
@@ -70,7 +71,7 @@
     }
 
     canvas {
-      margin-left: 10px;
+      //margin-left: 10px;
       margin-right: 10px;
     }
 
@@ -83,6 +84,7 @@
 
     ul {
       list-style: none;
+      margin-left: 10px;
       li {
         text-align: left;
       }

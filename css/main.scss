@@ -138,12 +138,12 @@ nav {
     transform: rotate($angle+deg);
 }
 
-.rightColumn{
+.rotateContainer{
     //margin-top: 50px;
 
     @for $i from 1 through 9 {
         :nth-child(#{$i}).rotate {
-            @include rotatePostIt(random(15)-7);
+            @include rotatePostIt(random(10)-5);
         }
     }
 }
