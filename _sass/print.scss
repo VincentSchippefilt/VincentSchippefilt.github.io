@@ -31,8 +31,6 @@
         }
     }
 
-    
-
     .progress-bar {
         font-size: 12px;
     }
@@ -40,6 +38,18 @@
     .panel-body {
         p {
             margin-bottom:5px;
+        }
+    }
+
+    .panel {
+        page-break-inside: avoid;
+    }
+
+    .progress {
+        height: 24px;
+        margin-bottom: 18px;
+        .progress-bar {
+            line-height: 24px;
         }
     }
 }
