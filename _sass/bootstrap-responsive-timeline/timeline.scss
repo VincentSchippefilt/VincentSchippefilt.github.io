@@ -57,7 +57,8 @@
   & .timeline-item {
     @extend .timeline-item-arrow-md;
     @include timeline-element;
-
+    page-break-inside: avoid;
+    
     margin-bottom: $timeline-item-margin-bottom;
 
     &:nth-of-type(2) {
@@ -161,7 +162,7 @@
 
       position: absolute;
       z-index: 100;
-      page-break-inside: avoid;
+      
       border: {
         width: $timeline-point-border-width;
         style: solid;

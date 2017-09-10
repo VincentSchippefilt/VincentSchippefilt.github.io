@@ -121,7 +121,7 @@ permalink: /cv/print2
             {% assign start = employer.StartDate | date: "%Y" %} {% assign end = employer.EndDate | default : "now" | date: "%Y" %} {%
             if employer.Projects.size == 1 %}
             <span class="timeline-label ">
-                        <h3><span class="label label-success">from {{ start }} until {{ end }}</span></h3>
+                <h3><span class="label label-success">from {{ start }} until {{ end }}</span></h3>
             </span>
             {% for project in employer.Projects %} {% include projectTimeline.html %} {% endfor %} {% else %} {% for year in (start..end)
             reversed %}
