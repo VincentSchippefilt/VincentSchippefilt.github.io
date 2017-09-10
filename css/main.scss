@@ -42,6 +42,12 @@ $on-laptop:        1140px;
 // Import partials from the `minima` theme.
 @import "minima";
 @import "postit.scss";
+
+.headerLink {
+    //font-size: 20px;    
+    
+}
+
 .project {
     display: inline-block;
     border: solid 1px black;
