@@ -57,7 +57,8 @@
   & .timeline-item {
     @extend .timeline-item-arrow-md;
     @include timeline-element;
-
+    page-break-inside: avoid;
+    
     margin-bottom: $timeline-item-margin-bottom;
 
     &:nth-of-type(2) {
@@ -161,7 +162,7 @@
 
       position: absolute;
       z-index: 100;
-
+      
       border: {
         width: $timeline-point-border-width;
         style: solid;
@@ -189,7 +190,6 @@
     @include timeline-item-start-margins(0, $timeline-second-item-margin-top);
 
     top: 1px;
-
     width: 100%;
 
     margin: {

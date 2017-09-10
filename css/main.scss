@@ -6,8 +6,8 @@
 
 // Our variables
 
-$base-font-family: 'Annie Use Your Telescope', cursive;    //"Helvetica Neue", Helvetica, Arial, sans-serif;
-$base-font-size:   20px;
+$base-font-family: "Gill Sans", "Gill Sans MT", "Segoe UI", Calibri, sans-serif;    //"Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-size:   15px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
@@ -138,24 +138,20 @@ nav {
     transform: rotate($angle+deg);
 }
 
-.rightColumn{
-    //margin-top: 50px;
-
-    @for $i from 1 through 9 {
+.rotateContainer {
+    @for $i from 1 through 10 {
         :nth-child(#{$i}).rotate {
-            @include rotatePostIt(random(15)-7);
+            @include rotatePostIt(random(10)-5);
         }
     }
 }
 
+canvas#responsibilities {
+    width: 390px;
+}
+
 .post-title {
-    //color: #e8b76e;
-    //background-color: darken(#2C527A, 6.5%);
     color: darken(#2C527A, 6.5%);
-    
-    //width: 30%;
-    //border-radius: 7px;
-    //padding: 5px 5px 5px 15px ;
     font-weight: bolder;
 }
 
@@ -163,3 +159,5 @@ nav {
     font-size: 16px;
     padding-top:1px;
 }
+
+@import "print.scss";

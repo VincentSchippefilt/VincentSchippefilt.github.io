@@ -1,10 +1,10 @@
 section:
   - sectionName: Brief positions history
     content:
-    - title: "2016-now : Solution Lead Agile Fixed prive projects @Gfi"
+    - title: "2016-now : Solution Lead Agile Fixed price projects @Gfi"
     - title: "2011-now : Application Architect - .Net & JS @Gfi"
     - title: "2007-2011 : Consultant - .Net & JS @Gfi"
-    - title: "2004-2007 : Analyst-Developper - distributed systems @Euroclear"
+    - title: "2004-2007 : Analyst-Developer - distributed systems @Euroclear"
     - title: "2000-2004 : Bachelor in Computer Sciences, management & systems @HEB-ESI"
   - sectionName: Methodologies
     content:
@@ -34,7 +34,7 @@ section:
     - title: Do the first scrum project in non-agile companies (2 times)
     - title: Do the first 1 week spring project in agile friendly company
     - title: Multiple firefighting interventions in on-going projects as consultant
-  - sectionName: Non technical skills
+  - sectionName: Non-technical skills
     content:
     - title: Coaching
     - title: Training

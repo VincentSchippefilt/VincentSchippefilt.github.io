@@ -4,8 +4,12 @@ permalink: /cv/technologies
 ---
 
 <div class="row">
-    <div class="col-xs-12">&nbsp;</div>
-    <div class="clearfix"></div>
+    <div class="col-lg-2 col-sm-3 col-xs-5">
+       <h2>Technology</h2> 
+    </div>
+    <div class="col-lg-10 col-sm-9 col-xs-7 text-center">
+        <h2> Number of month I worked with it</h2>   
+    </div>
 </div>
 {% assign tag_names = "" | split: "|" %} {% for employer in site.data.exp %} {% for project in employer.Projects %} {% assign
 alltech = project.TechnicalCategories | append: ", " | append: alltech %} {% assign t = project.TechnicalCategories | split:
