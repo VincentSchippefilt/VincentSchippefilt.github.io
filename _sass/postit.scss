@@ -13,7 +13,7 @@
     font-size: $base-font-size+5px;
     border-bottom-right-radius: 60px 5px;
     display:inline-block; 
-    max-width: 390px;   
+    max-width: 350px;   
   
     padding-bottom: 5px;
     page-break-inside: avoid;
@@ -30,7 +30,7 @@
       background: -ms-linear-gradient(-45deg, $baseColor 81%,$baseColor 82%,$baseColor 82%,$gradientEndColor 100%); /* IE10+ */
       background: linear-gradient(135deg, $baseColor 81%,$baseColor 82%,$baseColor 82%,$gradientEndColor 100%); /* W3C */
     }
-    
+        
     &.orange {
       $baseColor: #e8b76e;      
       $gradientEndColor: #e8b7ac;
@@ -71,7 +71,7 @@
     }
 
     canvas {
-      //margin-left: 10px;
+      margin-left: 10px;
       margin-right: 10px;
     }
 
