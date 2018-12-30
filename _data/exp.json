@@ -1,8 +1,13 @@
 [
+	{"Company": "Odoo",
+	"StartDate": "2018-01-02",
+	"EndDate":"",
+	"Projects":[]
+	},
     {
         "Company": "Gfi",
         "StartDate": "2008-12-01",
-        "EndDate": "",
+        "EndDate": "2017-12-31",
         "Projects": [
             {
                 "Customer": "Gfi",
@@ -34,7 +39,7 @@
                 "PeopleInvolved": 5,
                 "DurationInMonth": 2,
                 "TechnicalEnvironment": "NodeJS, Javascript, HTML, CSS, Postal, Backbone, JQuery, mongo db, Rest, Java",
-                "TechnicalCategories": "NodeJS, Javascript, HTML, CSS, Postal, Backbone, JQuery, mongo db, Rest, Java",                
+                "TechnicalCategories": "NodeJS, Javascript, HTML, CSS, Postal, Backbone, JQuery, mongo db, Rest, Java",
                 "ProjectDescription": "Explore the functional, technical and human landscape of the project as it is currently done, detect issues and possible optimizations or fixes in all domains.",
                 "Function": "Team leader, Scrum master",
                 "JobDescription": "Guide the team to produce a high quality audit. Participate in the writing of the final report. Imagine different strategies to fix the issues in the short, mid and long term.",
